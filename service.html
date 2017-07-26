@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>楚楚客服</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="service-top bgf">
+        <div class="box clearfix">
+            <a href="" class="fleft">
+                <span class="service-big"></span>
+                <p class="mt10">客服电话</p>
+            </a>
+            <a href="" class="fleft">
+                <span class="wechat-big"></span>
+                <p class="mt10">客服微信</p>
+            </a>
+        </div>
+    </div>
+    <!--自助窗口-->
+    <p class="online bgf mt10">
+        <a href="tel:18317838991">在线客服</a>
+        <span>咨询电话：027-87293128 （09:00-18:00）</span>
+    </p>
+    <p class="online bgf mt10">
+        <a href="###" class="wechat">客服微信号</a>
+        <span>如有更多问题,可关注微信服务号“楚楚精选”,工作时间随时咨询</span>
+    </p>
+    <div class="wechatbox">
+        <div class="wemask">
+            <div class="webox">
+                <p class="f16">扫描二维码添加客服微信</p>
+                <p class="f14 mb10">微信号：22784ew</p>
+                <img src="images/erwei.jpg" alt="" width="95%" style="margin: 0 auto;" class="qrcode">
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $('.wechat').click(function () {
+            $('.wemask').css('display', 'block')
+        })
+        $('.wemask').click(function () {
+            $(this).css('display', 'none');
+        })
+        $('.webox').click(function (event) {
+            event.stopPropagation();
+        })
+    </script>
+</body>
+</html>

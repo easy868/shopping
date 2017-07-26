@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>地址管理</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="fig"></div>
+    <ul class="address-all bgf">
+        <li>
+            <div class="addresbox fleft">
+                <p class="address-name">王小零 &nbsp;&nbsp;15698764231</p>
+                <p class="addres">北京市西城区西单地下通道二号管道窦玉洁几点几分我我饿纪律的说法</p>
+            </div>
+            <div class="editbox fright">
+                <span class="address-ed"></span>
+                <span class="address-de"></span>
+            </div>
+        </li>
+        <li class="de mt5">
+            <span class="nc"></span>默认地址
+        </li>
+    </ul>
+    <ul class="address-all bgf">
+        <li>
+            <div class="addresbox fleft">
+                <p class="address-name">王小零&nbsp;&nbsp;15698764231</p>
+                <p class="addres">北京市西城区西单地下通道二号管</p>
+            </div>
+            <div class="editbox fright">
+                <img src="images/ed.png" alt="" width="16">
+                <img src="images/delete.png" alt="" width="16">
+            </div>
+        </li>
+    </ul>
+    <a href="newadd.html" class="addaddress top"><span class="address-location"></span>新增收货地址</a>
+    <div class="mask">
+        <div class="address">
+            <p class="p1">
+                <span>新增收货地址</span>
+                <span class="close"></span>
+            </p>
+            <form action="">
+                <ul>
+                    <li><span class="biao">收件人姓名</span>: <input type="text" required></li>
+                    <li><span class="biao">手机号码</span>:<input type="number" required maxlength="11"></li>
+                    <li>
+                        <span class="biao">所在地</span>:
+                        <span>省</span>
+                        <select name="" id="" required>
+                            <option value="">选择省</option>
+                            <option value="">北京</option>
+                        </select>
+                        <span>市</span>
+                        <select name="" id="" required>
+                            <option value="">选择市</option>
+                            <option value="">嘉定</option>
+                        </select>
+                        <span>区</span>
+                        <select name="" id="" required>
+                            <option value="">选择区县</option>
+                            <option value="">太南门</option>
+                        </select>
+                    </li>
+                    <li><span class="biao">详细地址</span>:<input type="text" required></li>
+                    <li><span class="biao">邮政编码</span>:<input type="number" required></li>
+                </ul>
+                <input type="submit" value="保存" class="save">
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/manage.js"></script>
+</body>
+</html>

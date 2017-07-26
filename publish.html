@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>发表评价</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<div class="wrapper">
+    <form action="">
+        <div class="cont">
+            <div class="evaluate-box bgf mb10">
+                <div class="evaluate-top">
+                    <div class="evaluate-img">
+                        <img src="imagestest/1.png" alt="" width="50" height="50">
+                    </div>
+                    <!--商品图片-->
+                    <div class="star-wrap">
+                        <div class="starboxwrap">
+                            <ul class="pb-star-box">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <span class="star-txt"></span>
+                        </div>
+                        <p class="startxt">(1-2颗星差评，3-4颗星中评，5颗星好评)</p>
+                    </div>
+                    <!--打星星-->
+                </div>
+                <textarea class="mt10" name="" id="" cols="30" rows="10" placeholder="写下点什么吧"></textarea>
+                <div class="fileList"></div>
+                <div class="box clearfix">
+                    <div class="imgbox fleft">
+                        <input type="file" name="" class="fileElem" id="fileElem" multiple accept="image/*" onchange="handleFiles(this)">
+                        <label for="fileElem" id="">+</label>
+                    </div>
+                    <span style="font-size: 10px;color: #666;">添加图片最多6张，大小不超过120k</span>
+                </div>
+                <!--上传图片-->
+            </div>
+            <!--一个商品评价-->
+            <div class="evaluate-box bgf mb10">
+                <div class="evaluate-top">
+                    <div class="evaluate-img">
+                        <img src="imagestest/1.png" alt="" width="50" height="50">
+                    </div>
+                    <!--商品图片-->
+                    <div class="star-wrap">
+                        <div class="starboxwrap">
+                            <ul class="pb-star-box">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <span class="star-txt"></span>
+                        </div>
+                        <p class="startxt">(1-2颗星差评，3-4颗星中评，5颗星好评)</p>
+                    </div>
+                    <!--打星星-->
+                </div>
+                <textarea class="mt10" name="" id="" cols="30" rows="10" placeholder="写下点什么吧"></textarea>
+                <div class="fileList"></div>
+                <div class="box clearfix">
+                    <div class="imgbox fleft">
+                        <input type="file" name="" class="fileElem" id="fileElem" multiple accept="image/*" onchange="handleFiles(this)">
+                        <label for="fileElem" id="">+</label>
+                    </div>
+                    <span style="font-size: 10px;color: #666;">添加图片最多6张，大小不超过120k</span>
+                </div>
+                <!--上传图片-->
+            </div>
+            <!--一个商品评价-->
+            <div class="clabox bgf">
+                <p class="clatext">对本次购买商品的印象</p>
+                <ul class="claone clearfix">
+                    <li><span>版型好看</span></li>
+                    <li><span>外观时尚</span></li>
+                    <li><span>质量好</span></li>
+                    <li><span>穿着合身</span></li>
+                    <li><span>其它</span></li>
+                </ul>
+                <p class="clatext">给商家的服务评价</p>
+                <ul class="clatwo clearfix">
+                    <li><span>满意</span></li>
+                    <li><span>一般</span></li>
+                    <li><span>不满意</span></li>
+                </ul>
+            </div>
+            <!--商品印象-->
+        </div>
+        <ul class="publish-footer box-siz">
+            <li>
+                <ul class="all">
+                    <li class="chose-num">
+                        <span class="choseall"></span>
+                        <span>匿名评论</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="delete">发表评价</li>
+        </ul>
+        <!--底部结算-->
+    </form>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+    var star = $('.pb-star-box').find('li');
+    var star_txt = ['差评', '中评', '好评'];
+    star.click(function () {
+        var spanTxt = $(this).parent().next('span');
+        var idx = $(this).index();
+        $(this).addClass('star-red').prevAll().addClass('star-red');
+        if (this.className == 'star-red') {
+            $(this).nextAll().removeClass('star-red')
+        }
+        switch (idx) {
+            case 0:
+            case 1:
+                spanTxt.text(star_txt[0]);
+                break;
+            case 2:
+            case 3:
+                spanTxt.text(star_txt[1]);
+                break;
+            case 4:
+            case 5:
+                spanTxt.text(star_txt[2])
+        }
+    });
+    //    打星
+    $('.cla span').click(function () {
+        $(this).toggleClass('acspan');
+    });
+    $('.clatwo span').click(function () {
+        $('.clatwo span').removeClass('acspan');
+        $(this).addClass('acspan');
+    })
+    $('.choseall').click(function () {
+        $(this).toggleClass('ycheck')
+    })
+    //    选择印象
+
+    function addevaluate() {
+        var jsonImgObj = new Array();
+        $('#myinfotbody tr').each(function () {
+            var the = $(this);
+            var temp = {"img": the.children().find("img").attr('imgname')};
+            jsonImgObj.push(temp);
+        });
+
+        var obj = new Array();
+        var inputArr = [],
+            starArr = [];
+        $('textarea').each(function () {
+            var inputTxt = $(this).val();
+            inputArr.push(inputTxt);
+        });
+        $('.star-box').each(function () {
+            var starNmu = $(this).find('.star-red').length;
+            starArr.push(starNmu)
+        });
+        var objevaluate = {
+            "evaluates": obj,
+            "evaluateimgs": jsonImgObj,
+            "oid": 0,
+            "pid": 0,
+            "skuid": 0,
+            "evaluatecontent": inputArr,
+            "evaluatescore": starArr
+        };
+        $.ajax({
+            type: "post",
+            url: "/Evaluate/AddEvaluate",
+            data: {model: objevaluate},
+            success: function (msg) {
+                var key = msg.key;
+                var info = msg.info;
+                msgAlert("success", info);
+                if (key == "success") {
+                    location.href = "/Evaluate/EvaluateSuccess?oid=" + oid;
+                }
+            }
+        });
+    }
+    addevaluate()
+</script>
+<script>
+    var box = $('.evaluate-box');//一个商品的大包裹
+    var starArr = [],//建立一个打分的数组用来存取用户打了几颗星
+        inpArr = [];//存取用户输入的评价
+
+    function publishInfo() {
+        $.each(box, function () {
+            var strLen = $(this).find('.star-red').length;
+            // starArr.push(strLen);
+            var inpTxt = $(this).find('textarea').val();
+            // inpArr.push(inpTxt)
+            inpArr.push({
+                "strlen": strLen,
+                "inpTxt": inpTxt
+            });
+
+        });
+        console.log(inpArr);
+    }
+
+    $('.delete').click(function () {
+        publishInfo();
+    });//提交评价
+
+</script>
+<script>
+    window.URL = window.URL || window.webkitURL;
+    function handleFiles(obj) {
+        var fileElem = $('.fileElem'),
+            fileList = $('.fileList')[0];
+        var files = obj.files,
+            img = new Image();
+        if (window.URL) {
+            //File API
+            img.src = window.URL.createObjectURL(files[0]); //创建一个object URL，并不是你的本地路径
+            img.width = 47;
+            img.height = 47;
+            img.onload = function (e) {
+                window.URL.revokeObjectURL(this.src); //图片加载后，释放object URL
+            }
+            fileList.appendChild(img);
+        } else if (window.FileReader) {
+            //opera不支持createObjectURL/revokeObjectURL方法。我们用FileReader对象来处理
+            var reader = new FileReader();
+            reader.readAsDataURL(files[0]);
+            reader.onload = function (e) {
+                img.src = this.result;
+                img.width = 47;
+                img.height = 47;
+                fileList.appendChild(img);
+            }
+        } else {
+            //ie
+            obj.select();
+            obj.blur();
+            var nfile = document.selection.createRange().text;
+            document.selection.empty();
+            img.src = nfile;
+            img.width = 47;
+            img.height = 47;
+            fileList.appendChild(img);
+        }
+    }
+</script>
+</body>
+</html>

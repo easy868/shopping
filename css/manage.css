@@ -1,0 +1,45 @@
+.wrapper { font-size: 13px; color: #656565; }
+.address-all { border-bottom: 1px solid #e2e2e2; }
+.address-all li { padding: 10px 15px; overflow: hidden; display: flex; flex-direction: row; justify-content: space-between; }
+/*.address-all li p{ padding-bottom:10px;}*/
+.edit-wrap { padding: 10px 0; }
+/*.addres{ border-bottom:1px solid #ebebeb;}*/
+.edit { width: 80px; height: 24px; line-height: 24px; background: #d01d47; color: #fff; display: inline-block; text-align: center; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; margin-left: 20px; }
+.add-dress { width: 100%; text-align: center; padding: 0 15px; height: 40px; line-height: 40px; background: url("../images/right.png") no-repeat 96% #fff; -webkit-background-size: 8px; background-size: 8px; border-bottom: 1px solid #e2e2e2; position: fixed; left: 0; bottom: 0; }
+/*所有地址*/
+.fig { width: 100%; height: 5px; background: url("../images/fig.png"); }
+.address-name { padding-bottom: 8px; }
+/*.addres{ margin-top:10px;}*/
+.addresbox { width: 80%; }
+.editbox { width: 15%; display: flex; flex-direction: row; align-items: center; justify-content: space-between; }
+/*编辑 删除*/
+.mask { width: 100%; height: 100%; background: rgba(0, 0, 0, .6); position: fixed; bottom: 0; left: 0; display: none; }
+.address { width: 100%; background: #fff; position: fixed; bottom: 0; left: 0; display: none; }
+.address p, .address ul li { height: 34px; line-height: 34px; text-align: center; border-bottom: 1px solid #e2e2e2; padding: 0 5px 0 15px; position: relative; }
+.p1 span { vertical-align: top; }
+.address ul li { text-align: left; }
+.address input { height: 33px; border: none; width: 75%; vertical-align: top; }
+select { border: none; vertical-align: middle; appearance: none; -moz-appearance: none; -webkit-appearance: none; outline: none; width: 55px; }
+select option { width: 55px; }
+.address ul span { margin-right: 3px; }
+input.save { width: 64%; height: 29px; background: #d01d47; color: #fff; margin: 10px auto; display: block; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; font-size: 14px; }
+.close { position: absolute; right: 15px; top: 30%; }
+/*新增地址*/
+.biao { display: inline-block; width: 62px; text-align: justify; text-justify: distribute-all-lines; text-align-last: justify }
+.top { height: 44px; line-height: 44px; font-size: 14px; text-align: center; color: #333; border-bottom: 1px solid #e2e2e2; background: url("../images/right.png") no-repeat #fff 96%; -webkit-background-size: 8px; background-size: 8px; }
+.addaddress { width: 100%; position: fixed; left: 0; bottom: 0; text-align: center; border-top: 1px solid #e2e2e2; border-bottom: none; color: #fff; background: url("../images/right_white.png") no-repeat #d01d47 96%; -webkit-background-size: 4px; background-size: 4px; }
+.location { width: 17px; display: inline-block; vertical-align: middle; margin-right: 5px; }
+@media only screen and (min-device-width: 320px) and (max-device-width: 320px) {
+    select { border: none; vertical-align: middle; /*很关键：将默认的select选择框样式清除*/ appearance: none; -moz-appearance: none; -webkit-appearance: none; outline: none; width: 49px; }
+    select option { width: 49px; }
+    .address p, .address ul li { padding: 0 10px; }
+}
+
+.address-ed,.address-de{ display: inline-block; width:16px; height:16px;background: url("../images/ed.png") no-repeat; -webkit-background-size: contain; background-size: contain;}
+.address-de{
+    background: url("../images/delete.png") no-repeat;-webkit-background-size: contain; background-size: contain;
+}
+.address-location{ width: 24px; height:24px; display: inline-block; vertical-align: middle;
+background: url("../images/location.png") no-repeat; -webkit-background-size: contain; background-size: contain; margin-right: 5px;}
+
+.close{display: inline-block; width:16px; height:16px; position: absolute; right: 15px; top: 30%;background: url("../images/close2.png") no-repeat; -webkit-background-size: contain; background-size: contain;}

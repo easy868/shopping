@@ -1,0 +1,89 @@
+﻿
+.evaluate-box :first-child {
+    border-top: none;
+}
+.useimg {
+    width: 28px;
+    height: 28px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.eva-content {
+    font-size: 11px;
+    color: #333;
+    padding: 10px;
+    border-top: 1px solid #ebebeb;
+}
+.eva-detail {
+    display: table;
+}
+.useid-box {
+    display: table-cell;
+    vertical-align: middle;
+}
+.useid {
+    margin-left: 10px;
+}
+.star-wrap {
+    display: table-cell;
+    vertical-align: middle;
+}
+.star-box {
+    margin-left: 10px;
+    width: 65px;
+    height: 11px;
+    font-size: 0;
+    background: url("../images/2.png") no-repeat;
+    -webkit-background-size: 65px;
+    background-size: 65px;
+}
+.star-box span {
+    display: inline-block;
+    width: 59.5px;
+    height: 11px;
+    background: url("../images/1.png") no-repeat;
+    -webkit-background-size: 65px;
+    background-size: 65px;
+}
+.evaluate-img {
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 3px;
+}
+/*评价*/
+.cla {
+    width: 100%;
+    padding-top: 15px;
+    background: rgba(255, 255, 255, .9);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.cla li {
+    float: left;
+    width: 25%;
+    margin-bottom: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.cla span {
+    display: block;
+    margin: auto;
+    width: 75px;
+    height: 20px;
+    line-height: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    color: #666;
+    font-size: 10px;
+}
+.cla span.active {
+    background: #d01d47;
+    color: #fff;
+    border: 1px solid #d01d47;
+}

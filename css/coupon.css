@@ -1,0 +1,38 @@
+@charset "utf-8";
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,table,tbody,th,td,p,iframe,form,label,input,button,textarea,em,i,u,del,pre,span,a,strong,b{margin:0;padding:0;word-break:break-all}
+html{-webkit-text-size-hzjust:100%}
+body,input,textarea,select,button{font:12px/1.5 Arial,Helvetica,sans-serif,"PingFang SC","Microsoft YaHei"}
+body{min-width:320px;background:#f0f0f0;color:#333}
+h1,h2,h3,h4,h5,h6,input,textarea,select,button{font-size:100%}
+table{border-collapse:collapse;border-spacing:0}
+ol,ul{list-style:none}
+em,i{font-style:normal}
+img{border:0;vertical-align:middle}
+a{color:#333;text-decoration:none}
+.clearfix:after{content:".";height:0;font-size:0;clear:both;display:block;visibility:hidden}
+.mt10{margin-top:10px}
+
+.rcode-form form,.activity-list li a{display:-webkit-box;display:-moz-box;display:-webkit-flex;display:flex}
+.rcode-txt,.activity-list li .text{-webkit-box-flex:1;-moz-box-flex:1;-webkit-flex:1;flex:1}
+
+header{height:50px;line-height:50px;background:#333;position:relative}
+header .title{height:50px;text-align:center;font-weight:normal;font-size:18px;color:#fff}
+header .return{float:left;height:50px;margin-left:10px;padding-left:30px;background:url(../images/return.png) no-repeat 0 center;background-size:24px 24px;font-size:16px;color:#fff;position:absolute;left:0;top:0}
+.layout{background:#fff}
+.layout-hd{height:30px;line-height:30px;padding:0 10px;font-size:16px;font-weight:normal}
+.rcode-module{padding:10px 0}
+.rcode-form{margin-top:10px;padding:0 10px}
+.rcode-txt{height:40px;line-height:28px;padding:5px;font-size:14px;border:1px solid #e6e6e6;box-sizing:border-box}
+.rcode-btn{width:80px;height:40px;margin-left:10px;background:#d21e46;border:none;font-size:14px;color:#fff}
+.rcode-tips{margin-top:10px}
+.activity-module{padding:10px 0 0}
+.activity-list li{border-bottom:1px solid #e6e6e6}
+.activity-list li:last-child{border-bottom:none}
+.activity-list li a{padding:10px}
+.activity-list li .pic{width:100px;margin-right:15px}
+.activity-list li .pic img{width:100%}
+.activity-list li h3{line-height:25px;font-size:16px;font-weight:normal}
+.activity-list li .time{display:block;margin-top:5px;font-size:14px;color:#666}
+.activity-list li .state{margin-top:20px;font-size:16px;color:#d21e46}
+.mycoupon a{display:block;height:55px;line-height:25px;padding:15px 10px 15px 50px;box-sizing:border-box;background:url(../images/discount.png) no-repeat 10px center; background-size:32px 25px;font-size:16px}
+

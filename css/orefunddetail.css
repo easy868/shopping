@@ -1,0 +1,137 @@
+﻿  .wrapper {
+            font-size: 12px;
+        }
+
+        .orderList {
+            position: relative;
+            padding: 10px 15px;
+        }
+
+            .orderList li:first-child span {
+                font-size: 10px;
+                float: left;
+                color: #333;
+            }
+
+                .orderList li:first-child span:last-child {
+                    float: right;
+                    color: #d01d47;
+                }
+
+        .orderInfo {
+            font-size: 13px;
+        }
+
+        .img1 {
+            float: left;
+        }
+
+        .info {
+            margin-left: 70px;
+            margin-right: 30px;
+            display: -webkit-flex;
+            display: -webkit-box;
+            display: flex;
+            flex-direction: column;
+            line-height: 20px;
+            padding-bottom: 10px;
+        }
+
+            .info li:nth-child(2), .info li:nth-child(3) {
+                color: #656565;
+            }
+
+        .info2 li:first-child {
+            font-size: 14px;
+            color: #d01d47;
+        }
+
+        .info2 li:last-child {
+            text-align: right;
+        }
+
+        .info {
+            margin-left: 60px;
+            margin-right: 0;
+            padding-bottom: 0;
+        }
+
+        .orderList {
+            padding: 15px;
+            border-bottom: 1px solid #e2e2e2;
+        }
+
+        .orderInfo {
+            padding: 5px 0;
+            border-bottom: 1px solid #e2e2e2;
+        }
+
+        .orderList li:last-child {
+            border-bottom: none;
+        }
+
+        .planbox li:last-child {
+            border-left: none;
+        }
+
+        .planbox {
+            padding: 15px 15px 15px 23px;
+            min-height: 300px;
+        }
+
+            .planbox > li {
+                padding: 0 0 0 15px;
+                position: relative;
+                border-left: 1px solid #e2e2e2;
+                line-height: 19px;
+                min-height: 104px;
+            }
+
+        .icgreen {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #c4f1bf;
+            background: #12c700;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+        }
+
+        .handle, .handles {
+            text-align: right;
+        }
+
+        .handles {
+            background: url("images/ed.png") no-repeat right 80px center;
+            -webkit-background-size: 16px;
+            background-size: 16px;
+        }
+
+        .foot {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            -webkit-box-shadow: 0 -1px 8px #999;
+            -moz-box-shadow: 0 -1px 8px #999;
+            box-shadow: 0 -1px 8px #999;
+            border-radius: 1px;
+        }
+
+            .foot a {
+                display: block;
+                width: 38%;
+                height: 49px;
+                line-height: 49px;
+                text-align: center;
+                font-size: 14px;
+            }
+
+        .service {
+            color: #fff;
+            background: #d01d47;
+        }
+        /*底部联系客服*/

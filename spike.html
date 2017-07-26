@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>限时秒杀</title>
+<link type="text/css" rel="stylesheet" href="css/swiper-3.4.1.min.css">
+<link type="text/css" rel="stylesheet" href="css/base.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<section class="layout swiper-container spiketime">
+	<ul class="swiper-wrapper">
+    	<li class="swiper-slide"><a href="#" class="current">20:00</a></li>
+        <li class="swiper-slide"><a href="#">22:00</a></li>
+        <li class="swiper-slide"><a href="#">24:00</a></li>
+        <li class="swiper-slide"><a href="#">明天06:00</a></li>
+        <li class="swiper-slide"><a href="#">明天12:00</a></li>
+    </ul>
+</section>
+
+<div class="layout mt10 timetips">距离本场结束：<span class="countdown"><em class="day">0</em>天&nbsp;<em class="hour">0</em>时&nbsp;<em class="mini">0</em>分&nbsp;<em class="sec">0</em>秒</span></div>
+
+<section class="layout spike-list">
+	<div class="item">
+    	<a href="#" class="pic"><img src="imagestest/ps_180215_201705271632351165266.jpg" alt=""></a>
+        <div class="text">
+        	<p class="p">限时价<span class="present"><em>&yen;</em>146</span><span class="original">&yen;273</span></p>
+            <p class="t">怀旧刺绣拼接印图处理罩衫 不容易过时，怀旧时尚刺绣亮点~</p>
+            <p class="b"><a href="#" class="buybtn">立即抢购</a></p>
+            <p class="bar"><i style="width:30%"></i></p>
+            <p class="n">已售40件&nbsp;还剩90件</p>
+        </div>
+    </div>
+    
+    <div class="item">
+    	<a href="#" class="pic"><img src="imagestest/ps_180216_201705271642543049980.jpg" alt=""></a>
+        <div class="text">
+        	<p class="p">限时价<span class="present"><em>&yen;</em>808</span><span class="original">&yen;1299</span></p>
+            <p class="t">雅诗兰黛 特润修护肌透精华露赠送旅行装~</p>
+            <p class="b"><a href="#" class="buybtn">立即抢购</a></p>
+            <p class="bar"><i style="width:30%"></i></p>
+            <p class="n">已售40件&nbsp;还剩90件</p>
+        </div>
+    </div>
+    
+    <div class="item">
+    	<a href="#" class="pic"><img src="imagestest/ps_180052_201704071409318983380.jpg" alt=""></a>
+        <div class="text">
+        	<p class="p">限时价<span class="present"><em>&yen;</em>808</span><span class="original">&yen;1299</span></p>
+            <p class="t">日系优雅修身连衣裙 圆领蕾丝气质荷叶裙</p>
+            <p class="b"><a href="#" class="buybtn">立即抢购</a></p>
+            <p class="bar"><i style="width:30%"></i></p>
+            <p class="n">已售40件&nbsp;还剩90件</p>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/swiper-3.4.1.jquery.min.js"></script>
+<script type="text/javascript" src="js/clock.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var spikeTime = new Swiper(".spiketime",{
+		slidesPerView: "auto"
+	});
+	$(".countdown").fnTimeCountDown("2017/06/25 18:00:00");
+})
+</script>
+</body>
+</html>

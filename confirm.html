@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>订单结算</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="confirm-top"><span class="location"></span>&nbsp;新增收货地址</div>
+    <div class="user-address">
+        <p><span>王小二</span> <span>18378965423</span></p>
+        <p><span>北京市东城区两侧大厦东北大厦决斗都是好家饿哦发了可温柔女了肯德基奥拉夫</span></p>
+    </div>
+    <div class="fig mb10"></div>
+</header>
+<section class="confirm-shop bgf">
+    <h3>商品信息</h3>
+    <div class="orders-shop">
+        <a href="">
+            <img src="imagestest/shop1.png" alt="" width="60">
+            <div class="item-info">
+                <h3 class="ellip">时尚翻领叼上都是好动哦大农村电话机都烧完了女的杀了你</h3>
+                <p class="tworow">时尚特惠不过时就是好看作为一个爱好者无欲则刚的好处就是不用有欲望的好东西都是爱好的</p>
+                <p>M</p>
+            </div>
+        </a>
+        <div class="item-pay">
+            <p class="pic">¥128</p>
+            <p class="nums">x1</p>
+        </div>
+    </div>
+</section>
+<!--商品信息-->
+<ul class="all-info bgf">
+    <li>商品金额 <span class="fright">¥711</span></li>
+    <li>运费 <span class="fright">¥10</span></li>
+    <li>
+        优惠券
+        <span class="btn-default ml10">抵扣一张50元优惠券</span>
+        <span class="fright">2个可用优惠券</span>
+    </li>
+    <li>
+        积分抵扣
+        <span class="btn-default ml10">可抵扣40积分，减4元</span>
+        <span class="handle-switch fright"></span>
+    </li>
+</ul>
+<!--优惠信息-->
+<div class="we-box-wrap">
+    <div class="we-box">
+        <div class="allpric fleft">
+            <span>合计：</span>
+            <span class="allbig">¥888</span>
+            <span class="colo6 ml5">(含运费)</span>
+            <span class="ml10">共<em class="d01d47">1</em>件商品</span>
+        </div>
+        <a href="#" class="we-pay fright">立即下单</a>
+    </div>
+</div>
+<!--合计以及支付-->
+<div class="mask">
+    <div class="address">
+        <p>新增收货地址 <span class="close"></span></p>
+        <form action="">
+            <ul>
+                <li><input type="text" required placeholder="收件人姓名"></li>
+                <li><input type="number" required placeholder="手机号码"></li>
+                <li class="section">
+                    <select name="" id="" required>
+                        <option value="" disabled selected>选择省</option>
+                        <option value="">北京</option>
+                    </select>
+                    <select name="" id="" required>
+                        <option value="" disabled selected>选择市</option>
+                        <option value="">嘉定</option>
+                    </select>
+                    <select name="" id="" required>
+                        <option value="" disabled selected>选择区县</option>
+                        <option value="">太南门</option>
+                    </select>
+                </li>
+                <li><input type="text" required placeholder="详细地址"></li>
+                <li><input type="number" required placeholder="邮政编码"></li>
+            </ul>
+            <input type="submit" value="保存" class="save">
+        </form>
+    </div>
+</div>
+<!--新增地址弹出层-->
+<div class="mask2">
+    <div class="address1">
+        <p class="chose-title">选择收货地址 <span class="close2"></span></p>
+        <ul class="site clearfix">
+            <li class="choose-left fleft"><span></span></li>
+            <li class="right fright">
+                <span></span>
+            </li>
+            <li class="middle">
+                <p>王小二 18617896354</p>
+                <p style="line-height: 24px;">收货地址：北京市东城区小天安门69号田安</p>
+                <p>邮政编码：4698722</p>
+            </li>
+        </ul>
+        <p class="buy-address top"><img src="images/location.png" alt="" class="location">新增收货地址</p>
+    </div>
+</div>
+<!--选择地址弹出层-->
+<div class="canuse-mask">
+    <div class="all-discount bgf" onclick="event.stopPropagation();">
+        <div class="canuse-box bgf">
+            <p style="font-size: 13px;text-align: center;position: relative;padding: 10px 0;">
+                可用优惠券
+                <span style="color: #666;font-size: 9px;">(一个订单最多使用一张优惠券)</span>
+                <span class="close-popup"></span>
+            </p>
+            <div class="allbox mb10">
+                <span class="chose-ticket"></span>
+                <div class="discount-box bgf">
+                    <div class="discount-box-left">
+                        <div class="sale-price coff"><span class="f13">￥</span>5</div>
+                        <p class="coff f11">满35元可用</p>
+                    </div>
+                    <div class="discount-box-right">
+                        <ul class="discount-right-txt">
+                            <li class="f13">楚楚精选全平台优惠券</li>
+                            <li class="f11 co66">实付款满35元使用</li>
+                            <li class="f11 co66">2017.0509-2017.0528</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--一张优惠券-->
+            <div class="allbox mb10">
+                <span class="chose-ticket"></span>
+                <div class="discount-box bgf">
+                    <div class="discount-box-left">
+                        <div class="sale-price coff"><span class="f13">￥</span>5</div>
+                        <p class="coff f11">满35元可用</p>
+                    </div>
+                    <div class="discount-box-right">
+                        <ul class="discount-right-txt">
+                            <li class="f13">楚楚精选全平台优惠券</li>
+                            <li class="f11 co66">实付款满35元使用</li>
+                            <li class="f11 co66">2017.0509-2017.0528</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--一张优惠券-->
+            <div class="allbox mb10">
+                <span class="chose-ticket"></span>
+                <div class="discount-box bgf">
+                    <div class="discount-box-left">
+                        <div class="sale-price coff"><span class="f13">￥</span>5</div>
+                        <p class="coff f11">满35元可用</p>
+                    </div>
+                    <div class="discount-box-right">
+                        <ul class="discount-right-txt">
+                            <li class="f13">楚楚精选全平台优惠券</li>
+                            <li class="f11 co66">实付款满35元使用</li>
+                            <li class="f11 co66">2017.0509-2017.0528</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--一张优惠券-->
+            <div class="allbox mb10">
+                <span class="chose-ticket"></span>
+                <div class="discount-box bgf">
+                    <div class="discount-box-left">
+                        <div class="sale-price coff"><span class="f13">￥</span>5</div>
+                        <p class="coff f11">满35元可用</p>
+                    </div>
+                    <div class="discount-box-right">
+                        <ul class="discount-right-txt">
+                            <li class="f13">楚楚精选全平台优惠券</li>
+                            <li class="f11 co66">实付款满35元使用</li>
+                            <li class="f11 co66">2017.0509-2017.0528</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--一张优惠券-->
+            <div class="allbox mb10">
+                <span class="chose-ticket"></span>
+                <div class="discount-box bgf">
+                    <div class="discount-box-left">
+                        <div class="sale-price coff"><span class="f13">￥</span>5</div>
+                        <p class="coff f11">满35元可用</p>
+                    </div>
+                    <div class="discount-box-right">
+                        <ul class="discount-right-txt">
+                            <li class="f13">楚楚精选全平台优惠券</li>
+                            <li class="f11 co66">实付款满35元使用</li>
+                            <li class="f11 co66">2017.0509-2017.0528</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--一张优惠券-->
+            <div class="allbox mb10">
+                <span class="chose-ticket"></span>
+                <div class="discount-box bgf">
+                    <div class="discount-box-left">
+                        <div class="sale-price coff"><span class="f13">￥</span>5</div>
+                        <p class="coff f11">满35元可用</p>
+                    </div>
+                    <div class="discount-box-right">
+                        <ul class="discount-right-txt">
+                            <li class="f13">楚楚精选全平台优惠券</li>
+                            <li class="f11 co66">实付款满35元使用</li>
+                            <li class="f11 co66">2017.0509-2017.0528</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--一张优惠券-->
+            <div class="allbox mb10">
+                <span class="chose-ticket"></span>
+                <div class="discount-box bgf">
+                    <div class="discount-box-left">
+                        <div class="sale-price coff"><span class="f13">￥</span>5</div>
+                        <p class="coff f11">满35元可用</p>
+                    </div>
+                    <div class="discount-box-right">
+                        <ul class="discount-right-txt">
+                            <li class="f13">楚楚精选全平台优惠券</li>
+                            <li class="f11 co66">实付款满35元使用</li>
+                            <li class="f11 co66">2017.0509-2017.0528</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--一张优惠券-->
+            <div class="allbox mb10">
+                <span class="chose-ticket"></span>
+                <div class="discount-box bgf">
+                    <div class="discount-box-left">
+                        <div class="sale-price coff"><span class="f13">￥</span>5</div>
+                        <p class="coff f11">满35元可用</p>
+                    </div>
+                    <div class="discount-box-right">
+                        <ul class="discount-right-txt">
+                            <li class="f13">楚楚精选全平台优惠券</li>
+                            <li class="f11 co66">实付款满35元使用</li>
+                            <li class="f11 co66">2017.0509-2017.0528</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--一张优惠券-->
+            <div class="allbox mb10">
+                <span class="chose-ticket"></span>
+                <div class="discount-box bgf">
+                    <div class="discount-box-left">
+                        <div class="sale-price coff"><span class="f13">￥</span>5</div>
+                        <p class="coff f11">满35元可用</p>
+                    </div>
+                    <div class="discount-box-right">
+                        <ul class="discount-right-txt">
+                            <li class="f13">楚楚精选全平台优惠券</li>
+                            <li class="f11 co66">实付款满35元使用</li>
+                            <li class="f11 co66">2017.0509-2017.0528</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--一张优惠券-->
+            <div class="allbox mb10">
+                <span class="chose-ticket"></span>
+                <div class="discount-box bgf">
+                    <div class="discount-box-left">
+                        <div class="sale-price coff"><span class="f13">￥</span>5</div>
+                        <p class="coff f11">满35元可用</p>
+                    </div>
+                    <div class="discount-box-right">
+                        <ul class="discount-right-txt">
+                            <li class="f13">楚楚精选全平台优惠券</li>
+                            <li class="f11 co66">实付款满35元使用</li>
+                            <li class="f11 co66">2017.0509-2017.0528</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--一张优惠券-->
+            <div class="allbox mb10">
+                <span class="chose-ticket"></span>
+                <div class="discount-box bgf">
+                    <div class="discount-box-left">
+                        <div class="sale-price coff"><span class="f13">￥</span>5</div>
+                        <p class="coff f11">满35元可用</p>
+                    </div>
+                    <div class="discount-box-right">
+                        <ul class="discount-right-txt">
+                            <li class="f13">楚楚精选全平台优惠券</li>
+                            <li class="f11 co66">实付款满35元使用</li>
+                            <li class="f11 co66">2017.0509-2017.0528</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--一张优惠券-->
+            <div class="allbox mb10">
+                <span class="chose-ticket"></span>
+                <div class="discount-box bgf">
+                    <div class="discount-box-left">
+                        <div class="sale-price coff"><span class="f13">￥</span>5</div>
+                        <p class="coff f11">满35元可用</p>
+                    </div>
+                    <div class="discount-box-right">
+                        <ul class="discount-right-txt">
+                            <li class="f13">楚楚精选全平台优惠券</li>
+                            <li class="f11 co66">实付款满35元使用</li>
+                            <li class="f11 co66">2017.0509-2017.0528</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--一张优惠券-->
+        </div>
+    </div>
+</div>
+<!--优惠券弹出层-->
+</body>
+</html>

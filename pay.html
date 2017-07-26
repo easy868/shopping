@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>支付</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<div class="wrapper">
+    <p class="place">
+        <span class="warn"></span>&nbsp;&nbsp;请在15分钟内完成支付
+    </p>
+    <div class="pay-box bgf">
+        <span class="payimg"></span>
+        <a href="" class="paytxt2">支付</a>
+        <a href="" class="payover">支付完成</a>
+    </div>
+    <div class="we bgf mt10">
+        <img src="images/ewcode%20.png" alt="" width="66%" class="ewcode">
+        <div class="scan">
+            <span class="scanimg"></span>
+            <span class="scantxt">请使用微信扫一扫 <br>扫码二维码支付</span>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+    var ih = $(document).innerHeight();
+    var ph = $('.place').outerHeight();
+    var pah = $('.pay').outerHeight();
+    $('.we').outerHeight(ih-ph-pah-10)
+</script>
+</body>
+</html>

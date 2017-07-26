@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>登录商城手机版</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        html, body { height: 100%; font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; }
+        a { text-decoration: none; color: #fff; }
+        .wrapper { height: 100%; background: url("images/login_bg2.png") no-repeat;background-size: cover; overflow: hidden; }
+        .welcome, .plc { font-size: 32px; color: #fff; text-align: center; }
+        .welcome { margin-top: 40px; margin-bottom: 10px; }
+        .plc { font-size: 17px; color: #fff; }
+        .phonebox { width: 89.8%;position: fixed; bottom: 0; right: 0; overflow: hidden; font-size: 0; }
+        .methodbox { width: 70%; position: absolute; top: 22%; left: 10%; font-size: 12px; color: #333; line-height: 24px; }
+        .copy { display: block; width: 115px; line-height: 27px; text-align: center; background: #f4b4d6; -webkit-border-radius: 13px; -moz-border-radius: 13px; border-radius: 13px; margin: 10px auto; }
+        .method2 { margin-top: 40px; }
+        .ewcodeimg{display: block;margin: 20px auto 0;}
+        @media only screen and (max-width: 320px) {
+            .method2 { margin-top: 0; }
+            .ewcodeimg{display: block;margin: 10px auto 0;}
+        }
+        @media only screen and (max-width: 800px) {
+            .phonebox { width: 80%;}
+
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <p class="welcome">欢迎来到楚楚精选商城</p>
+    <p class="plc">请先关注商城公众号Hunwai2356</p>
+    <div class="phonebox">
+        <img class="phoneimg" src="images/phone.png" alt="" width="100%">
+        <div class="methodbox">
+            <p class="method1"><span style="font-size: 13px;">方法一:</span> <br>*复制公众号，打开微信，搜索后关注</p>
+            <a class="copy" href="">复制公众号</a>
+            <p class="method1 method2"><span style="font-size: 13px;">方法二:</span> <br>*请保存图片或截屏至相册，微信扫一扫关注</p>
+            <img class="ewcodeimg" src="images/ewcode%20.png" alt="" width="135">
+        </div>
+    </div>
+</div>
+</body>
+</html>

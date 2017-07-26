@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>列表页</title>
+<link type="text/css" rel="stylesheet" href="css/base.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="appbox">
+    <div class="topapp">
+        <a href="" class="shoplog">
+            <p style="font-size: 13px;">楚楚商城</p>
+            <p style="color: #666;">精挑细选女装特卖</p>
+        </a>
+        <div class="downnow">立即关注</div>
+        <span class="clos" onclick="$('.appbox').hide(); sessionStorage.setItem('dis', $('.appbox').css('display'));"></span>
+    </div>
+</div>
+
+<div class="filter-bar">
+	<div class="bd">
+        <!--默认-->
+        <a href="#">最新<i class="icon icon1"></i></a>
+        
+        <!--将序-->
+        <!--<a href="#" class="rv">最新<i class="icon icon1"></i></a>--> 
+        
+        <span class="v-line"></span>
+        
+        <!--默认-->
+        <!--<a href="#">价格<i class="icon icon2"></i></a>-->
+        
+        <!--将序-->
+        <!--<a href="#" class="rv">价格<i class="icon icon2"></i></a>-->
+        
+        <!--升序-->
+        <a href="#" class="od">价格<i class="icon icon2"></i></a>
+        
+        <span class="v-line"></span>
+        
+        <!--默认-->
+        <a href="#">销量<i class="icon icon1"></i></a>
+        
+        <!--将序-->
+        <!--<a href="#" class="rv">销量<i class="icon icon1"></i></a>-->
+        
+        <!--升序-->
+        <!--<a href="#" class="od">销量<i class="icon icon1"></i></a>-->
+    
+        <span class="v-line"></span>
+        <a href="#">分类<i class="icon type"></i></a>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+</body>
+</html>

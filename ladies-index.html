@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>新首页</title>
+    <!--<link rel="shortcut  icon" type="image/x-icon" href="images/favicon.ico" media="screen"/> 网站前面的小logo-->
+    <link rel="stylesheet" href="css/swiper-3.4.1.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <!--<link rel="stylesheet" href="css/newIndex.css">-->
+    <style>
+        .nav .i1 {
+            background: url("images/cho2.png") no-repeat;
+            -webkit-background-size: contain;
+            background-size: contain;
+        }
+        .nav .i2 {
+            background: url("images/hot.png") no-repeat;
+            -webkit-background-size: contain;
+            background-size: contain;
+        }
+        .nav .i4 {
+            background-position: -279px 0;
+        }
+        .scroll-box-wrap{ padding-right:10px; background: #fff;}
+        .scroll-box { padding: 10px; margin: 10px 0; overflow-x: scroll; overflow-y: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; }
+        .ticket-b { color: #000; height: 55px; margin-right: 5px; background: #ffd202; display: table; text-align: center; }
+        .ticket-b:last-child { margin-right: 10px; }
+        .ticket-get { height: 84px; width: 27px; font-size: 14px; font-weight: bold; text-align: center; float: right; background: #e9004f; color: #fff; text-align: center;display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; }
+        .ticket-intro { display: table-cell; vertical-align: middle; padding: 0 5px; }
+        .ticket-intro-bottom { font-size: 10px; margin: 0 auto; padding: 2px 4px; border-radius: 11px; background: #f9002f; color: #fff; }
+        .ticket-price { font-size: 40px; font-weight: bold; }
+        .ticket-price-right,
+        .ticket-price { display: table-cell; vertical-align: middle; }
+        .ticket-price { display: table-cell; }
+        .rmb { font-size: 13px; font-weight: normal; }
+        .get-jt{ display: inline-block; position: absolute; top:32px; left:-7px; border-top:10px solid transparent; border-right:10px solid #e9004f; border-bottom:10px solid transparent;}
+        /*618领取优惠券*/
+    </style>
+</head>
+<body>
+<div class="appbox">
+    <div class="topapp">
+        <a href="" class="shoplog">
+            <p style="font-size: 13px;">楚楚商城</p>
+            <p style="color: #666;">精挑细选女装特卖</p>
+        </a>
+        <div class="downnow">立即关注</div>
+        <span class="clos" onclick="$('.appbox').hide(); sessionStorage.setItem('dis', $('.appbox').css('display'));"></span>
+    </div>
+    <div style="height: 56px;"></div> <!--高度占位-->
+</div>
+<!--推广-->
+<div class="index-wrapper">
+    <div class="banner">
+        <div class="swiper-container banner">
+            <div class="swiper-wrapper">
+                <a href="" class="swiper-slide"><img src="imagestest/banner1.png" alt="" width="100%"></a>
+                <a href="" class="swiper-slide"><img src="imagestest/banner1.png" alt="" width="100%"></a>
+                <a href="" class="swiper-slide"><img src="imagestest/banner1.png" alt="" width="100%"></a>
+                <a href="" class="swiper-slide"><img src="imagestest/banner1.png" alt="" width="100%"></a>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!--轮播图-->
+    <div class="classify mb10">
+        <a href="">
+            <img src="images/ic_ts.png" alt="" class="ts" width="40">
+            <p>T恤</p>
+        </a>
+        <a href="">
+            <img src="images/ic_ts.png" alt="" class="ts" width="40">
+            <p>T恤</p>
+        </a>
+        <a href="">
+            <img src="images/ic_ts.png" alt="" class="ts" width="40">
+            <p>T恤</p>
+        </a>
+        <a href="">
+            <img src="images/ic_ts.png" alt="" class="ts" width="40">
+            <p>T恤</p>
+        </a>
+
+    </div>
+    <!--商品分类图标-->
+    <div class="classify-box clearfix">
+        <a class="classify-div fleft" href="alltheme.html" style="border-left: none;">
+            <div class="classify-txt">
+                <p class="txt-big">高端服饰</p>
+                <p class="txt-little">舒适宽松版型迷你连衣裙</p>
+            </div>
+            <div style="display: table-cell;vertical-align: middle;">
+                <img src="images/classify1.png" alt="" width="30">
+            </div>
+        </a>
+        <a class="classify-div fleft" href="alltheme.html" style="border-left: 1px solid #ebebeb;">
+            <div class="classify-txt">
+                <p class="txt-big">高端服饰</p>
+                <p class="txt-little">舒适宽松版型迷你连衣裙</p>
+            </div>
+            <div style="display: table-cell;vertical-align: middle;">
+                <img src="images/classify2.png" alt="" width="30">
+            </div>
+        </a>
+        <a class="classify-div fleft" href="alltheme.html" style="border-left: none;">
+            <div class="classify-txt">
+                <p class="txt-big">高端服饰</p>
+                <p class="txt-little">舒适宽松版型迷你连衣裙</p>
+            </div>
+            <div style="display: table-cell;vertical-align: middle;">
+                <img src="images/classify1.png" alt="" width="30">
+            </div>
+        </a>
+        <a class="classify-div fleft" href="alltheme.html" style="border-left: 1px solid #ebebeb;">
+            <div class="classify-txt">
+                <p class="txt-big">高端服饰</p>
+                <p class="txt-little">舒适宽松版型迷你连衣裙</p>
+            </div>
+            <div style="display: table-cell;vertical-align: middle;">
+                <img src="images/classify2.png" alt="" width="30">
+            </div>
+        </a>
+    </div>
+    <!--两大分类-->
+    <div class="scroll-box-wrap">
+        <div class="scroll-box bgf clearfix">
+            <div class="ticket-b fleft">
+                <div class="ticket-intro">
+                    <div class="ticket-intro-top">
+                        <div class="ticket-price-box">
+                            <span class="ticket-price"><span class="rmb">¥</span>20</span>
+                            <div class="ticket-price-right">
+                                <p style="font-size: 12px;">满399使用</p>
+                                <p style="font-size: 18px;font-weight: bold;">全场券</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ticket-intro-bottom">限618年中生活节使用</div>
+                </div>
+                <div class="ticket-get"><span>立即领取</span> <span class="get-jt"></span></div>
+            </div>
+            <div class="ticket-b fleft">
+                <div class="ticket-intro">
+                    <div class="ticket-intro-top">
+                        <div class="ticket-price-box">
+                            <span class="ticket-price"><span class="rmb">¥</span>60</span>
+                            <div class="ticket-price-right">
+                                <p style="font-size: 12px;">满399使用</p>
+                                <p style="font-size: 18px;font-weight: bold;">全场券</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ticket-intro-bottom">限618年中生活节使用</div>
+                </div>
+                <div class="ticket-get"><span>已领取</span> <span class="get-jt"></span></div>
+            </div>
+            <div class="ticket-b fleft">
+                <div class="ticket-intro">
+                    <div class="ticket-intro-top">
+                        <div class="ticket-price-box">
+                            <span class="ticket-price"><span class="rmb">¥</span>20</span>
+                            <div class="ticket-price-right">
+                                <p style="font-size: 12px;">满399使用</p>
+                                <p style="font-size: 18px;font-weight: bold;">全场券</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ticket-intro-bottom">限618年中生活节使用</div>
+                </div>
+                <div class="ticket-get"><span>已领取</span> <span class="get-jt"></span></div>
+            </div>
+        </div>
+    </div>
+    <!--优惠券领取区域滑动-->
+    <div class="theme bgf ">
+        <a href="theme.html" class="themeimg"><img src="imagestest/theme_banner.png" alt="" class="theme-banner" width="100%">
+            <span class="jt"></span>
+        </a>
+        <div class="swiper-container theme-wrap mt10">
+            <div class="swiper-wrapper theme-box">
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <div class="posi-img">
+                            <img src="imagestest/th_1.png" alt="" width="100%">
+                            <span class="hotsale-icon"></span>
+                        </div>
+                        <p class="shopname tworow">新品英文刺绣短袖没你有幸都嘚瑟就问问带框架搜我加尔文那现在呢静安寺</p>
+                    </a>
+                    <p class="theme-price">￥180 <span style="text-decoration: line-through;color: #666;font-size: 11px;">￥500</span></p>
+                </div>
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <div class="posi-img">
+                            <img src="imagestest/th_2.png" alt="" width="100%">
+                            <span class="hotshop-icon"></span>
+                            <span class="hotshop-iconblack"></span>
+                            <span class="hot-new"></span>
+                        </div>
+                        <p class="shopname tworow">新品英文刺绣短袖</p>
+                    </a>
+                    <p class="theme-price">￥180 </p>
+                </div>
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <img src="imagestest/th_3.png" alt="" width="100%">
+                        <p class="shopname tworow">新品英文刺绣短袖</p>
+                    </a>
+                    <p class="theme-price">￥180 </p>
+                </div>
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <img src="imagestest/th_1.png" alt="" width="100%">
+                        <p class="shopname tworow">新品英文刺绣短袖</p>
+                    </a>
+                    <p class="theme-price">￥180</p>
+                </div>
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <img src="imagestest/th_2.png" alt="" width="100%">
+                        <p class="shopname tworow">新品英文刺绣短袖</p>
+                    </a>
+                    <p class="theme-price">￥180</p>
+                </div>
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <img src="imagestest/th_3.png" alt="" width="100%">
+                        <p class="shopname tworow">新品英文刺绣短袖</p>
+                    </a>
+                    <p class="theme-price">￥180</p>
+                </div>
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <img src="imagestest/th_1.png" alt="" width="100%">
+                        <p class="shopname tworow">新品英文刺绣短袖</p>
+                    </a>
+                    <p class="theme-price">￥180</p>
+                </div>
+                <div class="swiper-slide theme-sp seemoreshop">
+                    <a href="">
+                        <img src="imagestest/th_1.png" alt="" width="100%" style="visibility: hidden">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--主题1-->
+    <div class="theme bgf ">
+        <a href="theme.html" class="themeimg"><img src="imagestest/theme_banner.png" alt="" class="theme-banner" width="100%">
+            <span class="jt"></span>
+        </a>
+        <div class="swiper-container theme-wrap mt10">
+            <div class="swiper-wrapper theme-box">
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <div class="posi-img">
+                            <img src="imagestest/th_1.png" alt="" width="100%">
+                            <span class="hotsale-icon"></span>
+                        </div>
+                        <p class="shopname tworow">新品英文刺绣短袖没你有幸都嘚瑟就问问的撒加肥加大四全文加入理科女看懂撒</p>
+                    </a>
+                    <p class="theme-price">￥180 <span style="text-decoration: line-through;color: #666;font-size: 11px;">￥500</span></p>
+                </div>
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <div class="posi-img">
+                            <img src="imagestest/th_2.png" alt="" width="100%">
+                            <span class="hotshop-icon"></span>
+                            <span class="hotshop-iconblack"></span>
+                            <span class="hot-new"></span>
+                        </div>
+                        <p class="shopname tworow">新品英文刺绣短袖</p>
+                    </a>
+                    <p class="theme-price">￥180 </p>
+                </div>
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <img src="imagestest/th_3.png" alt="" width="100%">
+                        <p class="shopname tworow">新品英文刺绣短袖</p>
+                    </a>
+                    <p class="theme-price">￥180 </p>
+                </div>
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <img src="imagestest/th_1.png" alt="" width="100%">
+                        <p class="shopname tworow">新品英文刺绣短袖</p>
+                    </a>
+                    <p class="theme-price">￥180</p>
+                </div>
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <img src="imagestest/th_2.png" alt="" width="100%">
+                        <p class="shopname tworow">新品英文刺绣短袖</p>
+                    </a>
+                    <p class="theme-price">￥180</p>
+                </div>
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <img src="imagestest/th_3.png" alt="" width="100%">
+                        <p class="shopname tworow">新品英文刺绣短袖</p>
+                    </a>
+                    <p class="theme-price">￥180</p>
+                </div>
+                <div class="swiper-slide theme-sp">
+                    <a href="shopDetail.html">
+                        <img src="imagestest/th_1.png" alt="" width="100%">
+                        <p class="shopname tworow">新品英文刺绣短袖</p>
+                    </a>
+                    <p class="theme-price">￥180</p>
+                </div>
+                <div class="swiper-slide theme-sp">
+                    <a href="">
+                        <img src="images/seemore.png" alt="" width="100%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--主题2-->
+    <div class="sale mt10 bgf">
+        <p class="sale-title">今日特价</p>
+        <div class="sale-content clearfix">
+            <a href="">
+                <div class="sale-imgbox">
+                    <img src="imagestest/th_1.png" alt="" width="100%">
+                    <div class="clockbox">
+                        <p id="t1" end-date="2017/4/30 13:0:09">距结束还剩: <br><span>10</span>时 <span>20</span>分 <span class="sec">30</span>秒</p>
+                    </div>
+                </div>
+                <p class="shopname tworow">时尚系带女人味十足的罩衫都是好动地回四川敬老卡及诶我</p>
+                <p><span class="b-price">原价：188</span><span>活动价:</span><span class="now-price">￥100</span></p>
+            </a>
+            <a href="">
+                <div class="sale-imgbox">
+                    <img src="imagestest/th_1.png" alt="" width="100%">
+                    <div class="clockbox">
+                        <p id="t2" end-date="2017/4/20 18:0:0">距结束还剩: <br><span>10</span>时 <span>20</span>分 <span class="sec">30</span>秒</p>
+                    </div>
+                </div>
+                <p class="shopname tworow">时尚系带女人味十足的罩衫都是好动地</p>
+                <p><span class="b-price">原价：188</span><span>活动价:</span><span class="now-price">￥100</span></p>
+            </a>
+            <a href="">
+                <div class="sale-imgbox">
+                    <img src="imagestest/th_1.png" alt="" width="100%">
+                    <div class="clockbox">
+                        <p id="t3" end-date="2017/4/20 18:0:0">距结束还剩: <br><span>10</span>时 <span>20</span>分 <span class="sec">30</span>秒</p>
+                    </div>
+                </div>
+                <p class="shopname tworow">时尚系带女人味十足的罩衫都是好动地</p>
+                <p><span class="b-price">原价：188</span><span>活动价:</span><span class="now-price">￥100</span></p>
+            </a>
+            <a href="###">
+                <img src="images/more_sale.png" alt="" width="100%">
+            </a>
+        </div>
+    </div>
+    <!--特价-->
+    <div class="hot mt10">
+        <p class="hot-title bgf">单品热卖</p>
+        <div class="hot-shop bgf clearfix">
+            <a href="shopDetail.html" class="hot-shop-img"><img src="imagestest/idx4.png" alt="" width="100%"></a>
+            <ul class="hot-shop-info fright">
+                <li class="f14">怀就此秀拼接因刺着频闪，不容易过时，怀旧刺绣亮点</li>
+                <li class="ellip mt5">商品简介介绍字数很多的话省略号都是好的</li>
+                <li class="f12">
+                    <span class="now-pri"><span class="rmb">￥</span>159</span><span class="before-pri">￥299</span>
+                </li>
+                <li class="out-num">已售<span class="d01d47">1234</span>件</li>
+                <li class="ope-box">
+                    <span class="addshop">加入购物车</span><span class="index-buy">立即购买</span>
+                </li>
+            </ul>
+        </div>
+        <div class="hot-shop bgf clearfix">
+            <a href="shopDetail.html" class="hot-shop-img"><img src="imagestest/idx4.png" alt="" class=" " width="100%"></a>
+            <ul class="hot-shop-info fright">
+                <a href="shopDetail.html" style="flex: 1;">
+                    <li class="f14">怀就此秀拼接因刺着频闪，不容易过时，怀旧刺绣亮点</li>
+                    <li class="ellip mt5">商品简介介绍字数很多的话省略号都是好的</li>
+                    <li class="f12">
+                        <span class="now-pri"><span class="rmb">￥</span>159</span><span class="before-pri">￥299</span>
+                    </li>
+                    <li class="out-num">已售<span class="d01d47">1234</span>件</li>
+                </a>
+                <li class="ope-box">
+                    <span class="addshop">加入购物车</span><span class="index-buy">立即购买</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--单品热卖-->
+    <div class="footer">
+        <ul class="nav clearfix">
+            <li>
+                <a href="ladies-index.html" class="active">
+                    <i class="i1"></i>
+                    <p>精选</p>
+                </a>
+            </li>
+            <li>
+                <a href="newrecom.html">
+                    <i class="i2"></i>
+                    <p>最新</p>
+                </a>
+            </li>
+            <li>
+                <a href="shopCart.html">
+                    <i class="i3">
+                        <span class="num2">30</span>
+                    </i>
+                    <p>购物车</p></a>
+            </li>
+            <li>
+                <a href="my.html">
+                    <i class="i4"></i>
+                    <p>我的</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--底部导航-->
+    <div class="mixture bgf mb10">
+        <a class="mixture-left">
+            <img src="imagestest/idx1.png" alt="" width="100%" height="100%">
+        </a>
+        <div class="mixture-right">
+            <a href="" class="mixture-top">
+                <img src="imagestest/idx2.png" alt="" width="100%" height="100%">
+                <div class="mixture-position-txt">
+                    <p style="font-size: 19px;font-weight: 600;color: #d01d47;">满399-100</p>
+                    <p class="f11">查看详情</p>
+                </div>
+            </a>
+            <a href="" class="mixture-bottom">
+                <img src="imagestest/idx3.png" alt="" width="100%" height="100%">
+                <div class="mixture-position-txt">
+                    <p style="font-size: 19px;font-weight: 600;color: #d0871d;">满399-100</p>
+                    <p class="f11">查看详情</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="mixture bgf mb10">
+        <a class="two-left">
+            <img src="imagestest/sale_shop1.png" alt="" width="100%" height="100%">
+            <div class="two-left-txt">7.5
+                <div class="break-txt">折/ <p>封顶</p></div>
+            </div>
+        </a>
+        <a class="two-right">
+            <img src="imagestest/sale_shop2.png" alt="" width="100%" height="100%">
+            <div class="two-left-txt">4.8
+                <div class="break-txt">折/ <p>封顶</p></div>
+            </div>
+        </a>
+    </div>
+    <div class="mixture bgf">
+        <div class="three-left">
+            <div class="three-left-top">
+                <a href="">
+                    <img src="imagestest/p1.png" alt="" width="100%" height="100%">
+                </a>
+                <a href="" style="margin-left: 5px;">
+                    <img src="imagestest/p2.png" alt="" width="100%" height="100%">
+                </a>
+            </div>
+            <a href="" style="width:196.88px;height: 89.08px;">
+                <img src="imagestest/p3.png" alt="" width="100%" height="100%">
+            </a>
+        </div>
+        <a class="one-right" href="">
+            <img src="imagestest/p4.png" alt="" width="100%" height="100%">
+        </a>
+    </div>
+    <!--混合布局块-->
+</div>
+<!--<div class="ewwrap">
+    <div class="ewmask">
+        <h1>楚楚精选商城</h1>
+        <p class="introtxt">长按识别楚楚精选公众号，查看更多新品上新，更多优惠活动</p>
+        <img src="images/ewcode%20.png" alt="" style="width: 48%;margin: 0 auto;">
+        <span class="close-ew" onclick="$('.ewwrap').hide()">点击关闭</span>
+    </div>
+</div>-->
+<!--长按识别二维码-->
+<script src="js/jquery-3.1.1.min.js"></script><!--jquery需要在swiper之前引入-->
+<script src="js/swiper-3.4.1.jquery.min.js"></script>
+<script src="js/newIndex.js"></script>
+<script src="js/timer.js"></script>
+<script>
+    var dd = sessionStorage.getItem('dis');
+    $('.appbox').css('display', dd);
+</script>
+</body>
+</html>

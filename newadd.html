@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>新增地址</title>
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        .newadd li { height: 35px; line-height: 35px; border-bottom: 1px solid #e2e2e2; padding: 0 15px; background: #fff; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-size: 12px; color: #666; }
+        input { width: 80%; text-indent: 10px; }
+        input::-webkit-input-placeholder { color: #666; font-size: 12px; }
+        input:-moz-placeholder { color: #666; }
+        input::-moz-placeholder { color: #666; }
+        input:-ms-input-placeholder { color: #666; }
+        /*修改placeholder颜色*/
+        .detail-add { text-indent: 0; width: 100%; }
+        select { width: 20%; appearance: none; -moz-appearance: none; -webkit-appearance: none; outline: none; background: none; }
+        .ml5 { margin-left: 5px; }
+        .to-default { line-height: 35px; font-size: 12px; padding: 0 15px; color: #666; }
+        .sub { width: 90%; display: block; margin: 20px auto 0; line-height: 35px; font-size: 14px; color: #fff; background: #d01d47; }
+        .to-sp { width: 14px; height: 14px; margin-right: 5px; display: inline-block; border: 1px solid #d01d47; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; background: url("images/draw.png") no-repeat center; -webkit-background-size: 10px; background-size: 10px; }
+        @media only screen and (max-width: 320px) {
+            .lastse { width: 70px !important; }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <form action="">
+        <ul class="newadd">
+            <li>收货人姓名 <input type="text" required></li>
+            <li>手机号码 <input type="text" maxlength="11" required></li>
+            <li>所在地
+                <select name="" id="" class="ml5" style="width: 80px;" required>
+                    <option value="">北京</option>
+                    <option value="">上海</option>
+                    <option value="">深圳</option>
+                </select>
+                <select name="" id="" style="width: 90px;" required>
+                    <option value="">天安门</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+                <select name="" id="" style="width: 90px;" class="lastse">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+            </li>
+            <li><input type="text" placeholder="详细地址" class="detail-add" required></li>
+        </ul>
+        <div class="to-default bgf mt20">设为默认 <span class="to-sp fright mt10"></span></div>
+        <input type="submit" value="保存" class="sub mt20">
+    </form>
+</div>
+</body>
+</html>

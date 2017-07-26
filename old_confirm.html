@@ -1,0 +1,254 @@
+<!doctype html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+
+<html lang="zh-cn" id="myshophtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title id="myshoptitle">确认订单-楚楚精选</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="http://test.chuchu.com/css/style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<!--是否提示关注楚楚精选公众号-->
+<div class="appbox">
+    <div class="topapp">
+        <div class="shoplog" onclick="$('.ewwrap').show()">
+            <p style="font-size: 13px;">楚楚商城</p>
+            <p style="color: #666;">精挑细选的女装特卖</p>
+        </div>
+        <div class="downnow" onclick="$('.ewwrap').show()">立即关注</div>
+        <span class="clos" onclick="$('.appbox').hide(); sessionStorage.setItem('dis', $('.appbox').css('display'));"></span>
+    </div>
+</div>
+<div class="ewwrap" style="display:none;">
+    <div class="ewmask">
+        <h1>楚楚精选商城</h1>
+        <p class="introtxt">长按识别楚楚精选公众号，查看更多新品上新，更多优惠活动</p>
+        <img src="/images/chuchuercode.jpg" alt="" style="width: 48%;margin: 0 auto;">
+        <span class="close-ew" onclick="$('.ewwrap').hide()">点击关闭</span>
+    </div>
+</div>
+
+
+<!--中间内容区-->
+
+
+<div class="wrapper">
+
+    <div class="top2">
+        <p><span>收货人：</span><span id="spconsignee">21</span> <span id="spmobile">12345678910</span></p>
+        <p class="top2-add mt5"><span id="spaddress">安徽省宿州市萧县123</span></p>
+    </div>
+    <div class="fig"></div>
+    <p class="confirm-top" style="display:none;"><span class="location"></span>&nbsp;新增收货地址</p>
+    <input type="hidden" value="1144" name="addressid" id="addressid"/>
+
+
+    <p class="" style="line-height: 30px; padding: 0 15px;background: #fff;">商品信息</p>
+
+    <ul class="confirm-list mt1 bgf clearfix">
+        <li class="orderInfo clearfix">
+            <img src="http://res.chuchu.com/newimg/upload/product/show/thumb120_160/ps_180269_201706081544507639635.jpg" alt="" width="60" class="img1">
+            <ul class="info2">
+                <li class="">￥199.00</li>
+                <li>x1</li>
+            </ul>
+            <ul class="info">
+                <li class="ellip">喇叭袖雪纺碎花连衣裙</li>
+                <li class="ellip">2017新款V领收腰</li>
+                <li class="">
+                    图片色/M
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <ul class="all-info mt10">
+        <li class="mb10">商品金额 <span class="fright">￥199.00</span></li>
+        <li class="mb10">运费 <span class="fright">￥0.00</span></li>
+        <li class="bill ">优惠券<span class="fright discountdataspan" yhcode="" yhamount="0">无</span></li>
+        <div class="cartlist" style="display:none;">
+            <input type="hidden" value="180269" name="pid"/>
+            <input type="hidden" value="2550" name="skuid"/>
+            <input type="hidden" value="1" name="skucount"/>
+        </div>
+
+    </ul>
+
+    <div class="mask">
+        <div class="address">
+            <p id="padtitle"><span id="ptitlespan">新增收货地址 </span><span class="close"></span></p>
+            <ul>
+                <li><input type="text" id="consignee" required placeholder="收件人姓名"></li>
+                <li><input type="number" id="mobile" required placeholder="手机号码" maxlength="11"></li>
+                <li class="section">
+                    <select name="slProvince" id="slProvince" onchange="GetCityData()" required>
+                        <option value="-1" selected>选择省</option>
+                    </select>
+                    <select name="slCity" id="slCity" onchange="GetaAreaData()" required>
+                        <option value="-1" selected>选择市</option>
+                    </select>
+                    <select name="slArea" id="slArea" required>
+                        <option value="-1" selected>选择区县</option>
+                    </select>
+                </li>
+                <li><input type="text" id="infoaddress" required placeholder="详细地址"></li>
+                <li><input type="number" id="zipcode" required placeholder="邮政编码"></li>
+            </ul>
+            <input type="submit" value="保存" class="save" onclick="CartBuySubAddressInfoData()">
+        </div>
+    </div>
+
+    <div class="mask2">
+        <div class="address1">
+            <p class="chose-title">选择收货地址 <span class="close2 cartbuyclose2"></span></p>
+            <div class="uaddresslist">
+            </div>
+            <p class="buy-address confirm-top"><span class="locationnew"></span>新增收货地址</p>
+        </div>
+    </div>
+
+    <div class="we-box">
+        <span class="allpric fleft">
+            合计：<span class="allbig d01d47">￥199.00</span>&nbsp; <span class="colo6">
+                (包邮)
+            </span>
+        </span>
+        <a class="we-pay fright" onclick="CartBuySubmitdata()">去支付</a>
+    </div>
+
+
+</div>
+
+<input type="hidden" value="1" id="myhidden"/>
+<input type="hidden" value="1" id="hidcreatetype"/>
+
+
+<div class="mask-t" id="masktRfundapply" style="display:none;">
+    <div class="content-t bgf">
+        <div class="toptxt">
+            <p>提交退货申请</p>
+            <span class="shut" onclick="$('.mask-t').hide()"></span>
+        </div>
+        <p class="infotxt">您确定要提交退货申请！退货订单平台将会进行审核。</p>
+        <div class="operation clearfix">
+            <div class="canceldiv fleft" onclick="$('.mask-t').hide()">取消</div>
+            <div class="affirm fleft" onclick="masktRfundapplyConfirm()">确认</div>
+        </div>
+    </div>
+    <!--删除订单-->
+</div>
+<div class="mask-t" id="masktDel" style="display:none;">
+    <div class="content-t bgf">
+        <div class="toptxt">
+            <p>删除订单</p>
+            <span class="shut" onclick="$('.mask-t').hide()"></span>
+        </div>
+        <p class="infotxt">请确认删除订单！删除后订单将不再显示。</p>
+        <div class="operation clearfix">
+            <div class="canceldiv fleft" onclick="$('.mask-t').hide()">取消</div>
+            <div class="affirm fleft" onclick="masktDelConfirm()">确认</div>
+        </div>
+    </div>
+    <!--删除订单-->
+</div>
+<div class="mask-t" id="masktCancel" style="display:none;">
+    <div class="content-t bgf">
+        <div class="toptxt">
+            <p>取消订单</p>
+            <span class="shut" onclick="$('.mask-t').hide()"></span>
+        </div>
+        <p class="infotxt">请确认取消订单！取消订单后订单状态为已取消。</p>
+        <div class="operation clearfix">
+            <div class="canceldiv fleft bgeb" onclick="$('.mask-t').hide()">暂不取消</div>
+            <div class="affirm fleft" onclick="masktCancelConfirm()">确认</div>
+        </div>
+    </div>
+    <!--取消订单-->
+</div>
+<div class="mask-t" id="masktRevoke" style="display:none;">
+    <div class="content-t bgf">
+        <div class="toptxt">
+            <p>撤销退货申请</p>
+            <span class="shut" onclick="$('.mask-t').hide()"></span>
+        </div>
+        <p class="infotxt">如果您暂时不想退货，请确认撤销申请。</p>
+        <div class="operation clearfix">
+            <div class="canceldiv fleft" onclick="$('.mask-t').hide()">取消</div>
+            <div class="affirm fleft" onclick="masktRevokeConfirm()">确认</div>
+        </div>
+    </div>
+    <!--撤销退货申请-->
+</div>
+<div class="mask-t" id="masktRefund" style="display:none;">
+    <div class="content-t bgf">
+        <div class="toptxt">
+            <p>选择退款理由</p>
+            <span class="shut" onclick="$('.mask-t').hide()"></span>
+        </div>
+        <p class="infotxt">
+            <select name="" id="masktRefundsl" required class="select-t">
+                <option value="不想买了" selected="selected">不想买了</option>
+                <option value="买错了">买错了</option>
+                <option value="买重了">买重了</option>
+                <option value="一时冲动下单了">一时冲动下单了</option>
+                <option value="一时冲动下单了">其他</option>
+            </select>
+        </p>
+        <div class="operation clearfix">
+            <div class="canceldiv fleft" onclick="$('.mask-t').hide()">取消</div>
+            <div class="affirm fleft" onclick="masktRefundConfirm()">确认</div>
+        </div>
+    </div>
+    <!--选择退款理由-->
+</div>
+<div class="mask-t" id="masktLogistics" style="display:none;">
+    <div class="content-t bgf">
+        <div class="toptxt">
+            <p>填写退货物流信息</p>
+            <span class="shut" onclick="$('.mask-t').hide()"></span>
+        </div>
+        <p class="infotxt">
+            <input type="number" name="" id="txtshipno" class="courier-num" placeholder="快递单号"><input type="text" name="" id="txtshipcompany" class="courier-name" placeholder="快递公司名称">
+        </p>
+        <div class="operation">
+            <div class="refer" onclick="masktLogisticsConfirm()">提交</div>
+        </div>
+    </div>
+    <!--填写退货物流信息-->
+</div>
+
+<input type="hidden" id="hidtitletxt"/>
+<input type="hidden" id="hidtitleimg"/>
+<input type="hidden" id="hidshoplogimg" value="~/images/shoplogo.png"/>
+<input type="hidden" id="hidappId"/>
+<input type="hidden" id="hidtimestamp"/>
+<input type="hidden" id="hidnonceStr"/>
+<input type="hidden" id="hidsignature"/>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://test.chuchu.com/js/jquery-3.1.1.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        if ($('#addressid').val() == 0) {
+            CartBuyaddAddressWindow();
+        }
+    });
+</script>
+
+<script charset="gb2312" src="http://test.chuchu.com/js/base.js"></script>
+<script charset="gb2312" src="http://test.chuchu.com/js/pageajax.js"></script>
+<div style="display:none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1261863438&web_id=1261863438" language="JavaScript"></script>
+</div>
+</body>
+</html>

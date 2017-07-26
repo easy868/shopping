@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>各种弹框</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="mask-t">
+        <div class="content-t bgf">
+            <div class="toptxt">
+                <p>删除订单</p>
+                <img src="images/close3.png" alt="" width="16" class="shut">
+            </div>
+            <p class="infotxt">请确认删除订单！删除后订单将不再显示。</p>
+            <div class="operation clearfix">
+                <div class="canceldiv fleft">取消</div>
+                <div class="affirm fleft">确认</div>
+            </div>
+        </div>
+        <!--删除订单-->
+        <div class="content-t bgf">
+            <div class="toptxt">
+                <p>取消订单订单</p>
+                <img src="images/close3.png" alt="" width="16" class="shut">
+            </div>
+            <p class="infotxt">请确认取消订单！取消订单后订单状态为已关闭。</p>
+            <div class="operation clearfix">
+                <div class="canceldiv fleft bgeb">暂不取消</div>
+                <div class="affirm fleft">确认</div>
+            </div>
+        </div>
+        <!--取消订单-->
+        <div class="content-t bgf">
+            <div class="toptxt">
+                <p>撤销退货申请</p>
+                <img src="images/close3.png" alt="" width="16" class="shut">
+            </div>
+            <p class="infotxt">如果您暂时不想退货，请确认撤销申请。</p>
+            <div class="operation clearfix">
+                <div class="canceldiv fleft">取消</div>
+                <div class="affirm fleft">确认</div>
+            </div>
+        </div>
+        <!--撤销退货申请-->
+        <div class="content-t bgf">
+            <div class="toptxt">
+                <p></p>
+                <p>选择退款理由</p>
+                <img src="images/close3.png" alt="" width="16" class="shut">
+            </div>
+            <p class="infotxt">
+                <select name="" id="" required class="select-t">
+                    <option value="请选择退货原因" disabled selected>请选择退货原因</option>
+                    <option value="七天无理由退货">七天无理由退货</option>
+                    <option value="买错了">买错了</option>
+                    <option value="破损">破损</option>
+                </select>
+            </p>
+            <div class="operation clearfix">
+                <div class="canceldiv fleft">取消</div>
+                <div class="affirm fleft">确认</div>
+            </div>
+        </div>
+        <!--选择退款理由-->
+        <div class="content-t bgf">
+            <div class="toptxt">
+                <p>填写退货物流信息</p>
+                <span class="shut"></span>
+            </div>
+            <p class="infotxt">
+                <input type="number" name="" id="" class="courier-num" placeholder="快递单号">
+                <input type="text" name="" id="" class="courier-name" placeholder="快递公司名称">
+            </p>
+            <div class="operation">
+                <div class="refer">提交</div>
+            </div>
+        </div>
+        <!--填写退货物流信息-->
+        <div class="content-t bgf">
+            <div class="toptxt">
+                <p style="color: #d01d47;">楚楚精选商城</p>
+                <img src="images/close3.png" alt="" width="16" class="shut">
+            </div>
+            <p class="infotxt" style="text-align: center;">为了更好地用户体验，请先关注商城公众号<img src="images/ewcode%20.png" alt="" width="80%" style="margin: 5px auto 0;">
+            </p>
+            <div class="operation clearfix">
+                <div class="canceldiv fleft bgeb" style="color: #999;background: #fff;">暂不关注</div>
+                <div class="affirm fleft">立即关注</div>
+            </div>
+        </div>
+        <!--关注公众号-->
+    </div>
+</div>
+</body>
+</html>
