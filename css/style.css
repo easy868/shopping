@@ -30,7 +30,8 @@ a{color:#333;text-decoration:none}
 .menu-md li{float:left;width:25%;padding:10px;box-sizing:border-box}
 .menu-md li a{display:block;text-align:center;font-size:0}
 .menu-md li p{line-height:20px;margin-top:2px;font-size:12px}
-.menu-md li i{display:inline-block;width:45px;height:45px;background-repeat:no-repeat;background-position:0 0;background-size:45px 45px}
+.menu-md li .icon{display:inline-block;width:45px;height:45px;background-repeat:no-repeat;background-position:0 0;background-size:45px 45px;position:relative}
+.menu-md li .gif{display:inline-block;width:24px;height:12px;background:url(../images/specialoffer.gif) no-repeat 0 0;background-size:24px 12px;position:absolute;top:3px;right:-6px}
 .goods-list li{float:left;width:50%;box-sizing:border-box}
 .goods-list li a{display:block;position:relative}
 .goods-list li img{width:100%}
@@ -127,7 +128,7 @@ a{color:#333;text-decoration:none}
 .spike-list .n{margin-top:10px;text-align:right;color:#999}
 .rcode-form{padding:5px 10px 10px}
 .rcode-txt{height:35px;line-height:25px;padding:5px;border:1px solid #e6e6e6;box-sizing:border-box}
-.rcode-btn{width:80px;height:35px;margin-left:10px;background:#d21e46;border:none;font-size:14px;color:#fff}
+.rcode-btn{width:80px;height:35px;margin-left:10px;background:#d01d47;border:none;font-size:14px;color:#fff}
 .rcode-tips{margin-top:10px}
 .activity-list li{border-bottom:1px solid #e6e6e6}
 .activity-list li:last-child{border-bottom:none}
@@ -136,5 +137,5 @@ a{color:#333;text-decoration:none}
 .activity-list li .pic img{width:100%}
 .activity-list li h3{height:20px;font-size:14px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
 .activity-list li .time{display:block;margin-top:5px;color:#666}
-.activity-list li .state{margin-top:10px;font-size:14px;color:#d21e46}
+.activity-list li .state{margin-top:10px;font-size:14px;color:#d01d47}
 .mycoupon a{display:block;height:50px;line-height:20px;padding:15px 10px 15px 50px;box-sizing:border-box;background:url(../images/discount.png) no-repeat 10px center;background-size:32px 25px;font-size:14px}
