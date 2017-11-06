@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>修改昵称</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<form action="">
+    <section class="hobby nickname">
+        <div><input placeholder="这里可以填入昵称" maxlength="20"></input>
+            <p class="quantity"><span>0</span>/20</p>
+        </div>
+        <p>
+            不超过20个字符、文字
+        <button type="submit" class="fright">保存</button>
+        </p>
+    </section>
+</form>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+    (function ($) {
+        $('.hobby input').on('input', function () {
+            $('.quantity span').text($(this).val().length)
+        })
+    })(jQuery)
+</script>
+</body>
+</html>

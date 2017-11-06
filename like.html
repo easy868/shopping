@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>喜欢的风格</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="like">
+    <ul class="like-list clearfix">
+        <li>瑞丽</li>
+        <li>嬉皮</li>
+        <li>百搭</li>
+        <li>瑞丽</li>
+        <li>波西米亚</li>
+        <li>百搭</li>
+        <li>瑞丽</li>
+        <li>嬉皮</li>
+        <li>百搭</li>
+    </ul>
+    <div class="like-sub mt10">
+        可以多选哦
+        <button type="submit">保存</button>
+    </div>
+</section>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+    (function ($) {
+        $('.like-list li').on('click', function () {
+            $(this).toggleClass('active');//选中样式 active
+        })
+    })(jQuery)
+</script>
+</body>
+</html>

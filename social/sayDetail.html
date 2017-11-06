@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>说说详情</title>
+    <link rel="stylesheet" href="../css/social.css">
+</head>
+<body>
+<main>
+    <section class="room-item">
+        <div class="item-body">
+            <div class="item-body-head">
+                <img src="../images/useimg.png" class="user-img">
+                <div class="r">
+                    <p class="t">CCChin <span></span> <span class="ic-vip"></span></p>
+                    <p class="b">10-08 10:28</p>
+                </div>
+            </div>
+            <p class="text">包包真的特别喜欢，比专柜价格便宜好多，而且质量真心棒棒哒，包装、吊牌、包袋一应俱全，现在出门吃个饭什么的方便多了。</p>
+            <div class="img-wrap more-than clearfix">
+                <img src="../imagestest/1.png" alt="">
+                <img src="../imagestest/1.png" alt="">
+                <img src="../imagestest/1.png" alt="">
+                <img src="../imagestest/1.png" alt="">
+            </div>
+        </div>
+        <div class="item-foot has-comment">
+            <a href=""> <span class="ic-pl"></span>评论</a>
+            <a href=""> <span class="ic-zan"></span>288</a>
+        </div>
+        <ul class="comment-list">
+            <li class="comment-item">
+                <div class="item-head">
+                    <img src="../images/useimg.png" class="item-userimg">
+                    <div class="user-info">
+                        <p>用户名 <span class="ic-pt"></span> <span class="ic-vip"></span></p>
+                        <p class="time">10-26 14:16</p>
+                    </div>
+                    <div class="zan">2</div>
+                </div>
+                <div class="item-body">
+                    <p>这一家的衣服确实不错，我经常光顾。</p>
+                    <div class="item-body-img">
+                        <img src="../imagestest/sale_shop2.png" alt="">
+                        <img src="../imagestest/sale_shop2.png" alt="">
+                        <img src="../imagestest/sale_shop2.png" alt="">
+                    </div>
+                </div>
+            </li>
+            <li class="comment-item">
+                <div class="item-head">
+                    <img src="../images/useimg.png" class="item-userimg">
+                    <div class="user-info">
+                        <p>用户名 <span class="ic-pt"></span> <span class="ic-vip"></span></p>
+                        <p class="time">10-26 14:16</p>
+                    </div>
+                    <div class="zan">2</div>
+                </div>
+                <div class="item-body">
+                    <p>这一家的衣服确实不错，我经常光顾。</p>
+                    <div class="item-body-img">
+                        <img src="../imagestest/sale_shop2.png" alt="">
+                        <img src="../imagestest/sale_shop2.png" alt="">
+                        <img src="../imagestest/sale_shop2.png" alt="">
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!--评论列表-->
+        <div class="write-comment" style="display: block;">
+            <textarea placeholder="说两句吧~"></textarea>
+            <div class="white-comment-img clearfix">
+                <div class="img-box">
+                    <img src="../imagestest/shop1.png" alt="">
+                    <span class="close"><i></i></span>
+                </div>
+                <div class="img-box">
+                    <img src="../imagestest/shop1.png" alt="">
+                    <span class="close"><i></i></span>
+                </div>
+            </div>
+            <div class="write-comment-sub">
+                <span class="phto"></span><span class="face"></span>
+                <div class="sub-btn-wrap">
+                    <span>0/100</span>
+                    <button type="submit">提交</button>
+                </div>
+            </div>
+        </div>
+        <!--评论输入框-->
+    </section>
+</main>
+<!--主体内容-->
+<footer class="foot-follow foot-comment">
+    <div class="follow">
+        <span>评论</span>
+    </div>
+</footer>
+<!--评论-->
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script>
+    (function ($) {
+        $('.foot-comment span').on('click', function () {
+            $('.write-comment').show();
+            $('.write-comment textarea').focus();
+        }) //点击底部评论显示输入框
+    })(jQuery)
+</script>
+</body>
+</html>

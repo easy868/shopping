@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>发布说说</title>
+    <link rel="stylesheet" href="../css/social.css">
+</head>
+<body>
+<header class="release-head">
+    <img src="../images/share_txt.png" alt="">
+    <button class="btn" type="submit">发布</button>
+</header>
+<section class="release-body">
+    <div class="item-goods clearfix">
+        <img src="../imagestest/sale_shop1.png" alt="">
+        <ul class="goods-info">
+            <li>明星baby娜扎同款包包链条包简约单肩斜跨新款小方包真皮
+                迷你女包
+            </li>
+            <li>￥188.90</li>
+        </ul>
+    </div>
+    <textarea placeholder="请在此处输入你想分享的内容…"></textarea>
+    <ul class="img-wrap video-wraps">
+        <li>
+            <img src="../imagestest/shop2.png" alt="">
+            <span class="dele"><i></i></span>
+            <span class="video-btn"></span>
+        </li>
+        <li>
+            <img src="../imagestest/shop1.png" alt="">
+            <span class="dele"><i></i></span>
+        </li>
+        <li>
+            <img src="../imagestest/sale_shop2.png" alt="">
+            <span class="dele"><i></i></span>
+        </li>
+        <li>
+            <img src="../imagestest/sale_shop2.png" alt="">
+            <span class="dele"><i></i></span>
+        </li>
+        <li>
+            <img src="../imagestest/sale_shop2.png" alt="">
+            <span class="dele"><i></i></span>
+        </li>
+        <li>
+            <img src="../imagestest/sale_shop2.png" alt="">
+            <span class="dele"><i></i></span>
+        </li>
+    </ul>
+</section>
+<footer class="release-foot">
+    <ul>
+        <li class="i1"><span></span></li>
+        <li class="i2"><span></span></li>
+        <li class="i3"><span></span></li>
+        <li class="i4"><span></span></li>
+        <li class="i5"><span></span></li>
+    </ul>
+</footer>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script>
+    (function ($) {
+        $('.img-wrap .dele').on('click',function () {
+            $(this).parent('.img-wrap li').remove();
+        });
+    })(jQuery)
+</script>
+</body>
+</html>

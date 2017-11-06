@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var mySwiper = new Swiper('.swiper-container', {
+    var mySwiper = new Swiper('.banner .swiper-container', {
         pagination: '.swiper-pagination', //分页器
         paginationClickable: true,  //分页按钮点击
         paginationType: 'fraction',

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>人脉圈</title>
+    <link rel="stylesheet" href="../css/social.css">
+</head>
+<body class="network">
+<ul class="tabs clearfix">
+    <li class="active">我推荐的</li>
+    <li>关注我的</li>
+</ul>
+<div class="tab-content">
+    <section class="tab-pane" style="display: block;">
+        <h2 class="allnum">注册总数 28</h2>
+        <ul>
+            <li>
+                <img src="../images/useimg.png" class="l">
+                <div class="m">
+                    <p class="name">CCChin <span class="ic-pt"></span> <span class="ic-vip"></span></p>
+                    <p class="sign">心有多大，格局就有多大</p>
+                </div>
+                <div class="r">
+                    <span></span>
+                    <button>关注他</button>
+                </div>
+            </li>
+            <li>
+                <img src="../images/useimg.png" class="l">
+                <div class="m">
+                    <p class="name">CCChin <span class="ic-pt"></span> <span class="ic-vip"></span></p>
+                    <p class="sign">心有多大，格局就有多大</p>
+                </div>
+                <div class="r">
+                    <span></span>
+                    <button>关注他</button>
+                </div>
+            </li>
+            <li>
+                <img src="../images/useimg.png" class="l">
+                <div class="m">
+                    <p class="name">CCChin <span class="ic-pt"></span> <span class="ic-vip"></span></p>
+                    <p class="sign">心有多大，格局就有多大</p>
+                </div>
+                <div class="r">
+                    <span></span>
+                    <button>关注他</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="tab-pane">
+        <h2 class="allnum">关注总数 28</h2>
+        <ul>
+            <li>
+                <img src="../images/useimg.png" class="l">
+                <div class="m">
+                    <p class="name">CCChin <span class="ic-pt"></span> <span class="ic-vip"></span></p>
+                    <p class="sign">心有多大，格局就有多大</p>
+                </div>
+                <div class="r">
+                    <span></span>
+                    <button>关注他</button>
+                </div>
+            </li>
+            <li>
+                <img src="../images/useimg.png" class="l">
+                <div class="m">
+                    <p class="name">CCChin <span class="ic-pt"></span> <span class="ic-vip"></span></p>
+                    <p class="sign">心有多大，格局就有多大</p>
+                </div>
+                <div class="r">
+                    <span></span>
+                    <button>关注他</button>
+                </div>
+            </li>
+            <li>
+                <img src="../images/useimg.png" class="l">
+                <div class="m">
+                    <p class="name">CCChin <span class="ic-pt"></span> <span class="ic-vip"></span></p>
+                    <p class="sign">心有多大，格局就有多大</p>
+                </div>
+                <div class="r">
+                    <span></span>
+                    <button>关注他</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script>
+    (function ($) {
+        $('.tabs li').on('click', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.tab-content .tab-pane').eq($(this).index()).show().siblings().hide();
+        });//切换选项卡
+
+        $('.tab-pane .r').on('click',function () {
+            $(this).toggleClass('active');
+            if($(this).hasClass('active')){
+                $(this).find('button').text('已关注');
+            }else{
+                $(this).find('button').text('关注他');
+            }
+        });
+    })(jQuery)
+</script>
+</body>
+</html>

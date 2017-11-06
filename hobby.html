@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>爱好</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<form action="">
+    <div class="hobby">
+        <div><textarea placeholder="这里可以填写你的爱好" maxlength="40"></textarea>
+            <p class="quantity"><span>0</span>/40</p>
+        </div>
+        <button type="submit" class="fright">保存</button>
+    </div>
+</form>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+    (function ($) {
+        $('.hobby textarea').on('input', function () {
+            $('.quantity span').text($(this).val().length)
+        })
+    })(jQuery)
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>我的发布</title>
+    <link rel="stylesheet" href="../css/social.css">
+</head>
+<body>
+    <section class="release-item">
+        <div class="item-body">
+            <p class="text">今天收到货品，完好无损，包装别具一格很贴心，试穿衣服，质感随即体现，确实轻便舒适，一次愉悦的购物。</p>
+            <div class="img-wrap">
+                <img src="../imagestest/1.png" alt="">
+            </div>
+        </div>
+        <div class="item-foot clearfix">
+            <span class="time">10/24  15:23</span>
+            <div class="about">
+                <span class="l">281</span><span class="r">304</span>
+            </div>
+        </div>
+    </section>
+    <section class="release-item">
+        <div class="item-body">
+            <p class="text">包包真的特别喜欢，比专柜价格便宜好多，而且质量真心棒棒哒，包装、吊牌、包袋一应俱全，现在出门吃个饭什么的方便多了。</p>
+            <div class="img-wrap more-than clearfix">
+                <img src="../imagestest/1.png" alt="">
+                <img src="../imagestest/1.png" alt="">
+                <img src="../imagestest/1.png" alt="">
+                <img src="../imagestest/1.png" alt="">
+            </div>
+            <div class="item-goods clearfix">
+                <img src="../imagestest/sale_shop1.png" alt="">
+                <ul class="goods-info">
+                    <li>明星baby娜扎同款包包链条包简约单肩斜跨新款小方包真皮
+                        迷你女包
+                    </li>
+                    <li>￥188.90</li>
+                </ul>
+            </div>
+        </div>
+        <div class="item-foot clearfix">
+            <span class="time">10/24  15:23</span>
+            <div class="about">
+                <span class="l">281</span><span class="r">304</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="ft-nav">
+        <div class="bd">
+            <a href="../index.html"><i class="icon icon1"></i><span class="text">精选</span></a>
+            <a href="../category.html"><i class="icon icon2"></i><span class="text">分类</span></a>
+            <a href="##"><i class="add-wrap"></i></a>
+            <a href="../shopCart.html"><i class="icon icon3"><em class="circle">45</em></i><span class="text">购物车</span></a>
+            <a href="../my2.html"><i class="icon icon4"></i><span class="text">我的</span></a>
+        </div>
+    </section>
+    <section class="mask-light" style="display: none;">
+        <ul class="mask-body">
+            <li>
+                <span class="i1"></span>
+                <p>文字</p>
+            </li>
+            <li>
+                <span class="i2"></span>
+                <p>照片</p>
+            </li>
+            <li>
+                <span class="i3"></span>
+                <p>拍摄</p>
+            </li>
+            <li>
+                <span class="i4"></span>
+                <p>商品</p>
+            </li>
+        </ul>
+        <div class="mask-close"></div>
+    </section>
+
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script>
+    (function ($) {
+        $('.ft-nav .add-wrap').on('click', function () {
+            $('.mask-light').fadeIn();
+        });//点击加号显示遮罩层
+        $('.mask-close').on('click', function () {
+            $('.mask-light').fadeOut();
+        }) //点击叉号关闭
+    })(jQuery)
+</script>
+</body>
+</html>
