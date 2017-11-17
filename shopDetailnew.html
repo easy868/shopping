@@ -428,8 +428,12 @@
 <!--jquery需要在swiper之前引入-->
 <script src="js/swiper-3.4.1.jquery.min.js"></script>
 <script src="js/shopDetail.js"></script>
-<script src="js/clock.js"></script>
+<script src="js/countDown.js"></script>
 <script>
+    var themeCon = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        autoplay:10000
+    });//头部轮播
     $('.service-wrap').find('a').click(function () {
         $(this).addClass('bord-b').siblings().removeClass('bord-b');
         var idx = $(this).index();
@@ -456,7 +460,7 @@
     }
 
     //    滚动式固定服务等
-    $(".count-down-box").fnTimeCountDown("2018/06/15 18:00:00");//    倒计时
+    $(".count-down-box").fnTimeCountDown("2017/11/10");//    倒计时
 </script>
 </body>
 </html>

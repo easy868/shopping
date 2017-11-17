@@ -9,7 +9,7 @@ $.fn.extend({
             var endDate = new Date(dateStr.replace(/-/g, "/"));//取得指定时间的总毫秒数
             //now是在动态页面中取得服务器的时间，如果没有定义使用客户端时间
             var now;
-            if (now == undefined) {
+            if (now === undefined) {
                 now = new Date().getTime();
             }
             var tms = endDate - now;//得到时间差
@@ -19,7 +19,6 @@ $.fn.extend({
             $.oaoTime.timers.push({tms: tms, content: $(this)});
             $.oaoTime.start();
         });
-
     }
 });
 //倒计时的插件
@@ -31,7 +30,7 @@ $.oaoTime = {
     //计算时间并定时刷新时间的方法，本插件的核心代码
     takeCount: function () {
         //如果定时器没有启动不执行
-        if (this.status != 'start')return;
+        if (this.status !== 'start') return;
         setTimeout("$.oaoTime.takeCount()", 1000);
         var timers = this.timers;
         for (var i = 0, j = timers.length; i < j; i++) {
@@ -61,5 +60,4 @@ $.oaoTime = {
     stop: function () {
         this.status = 'stop';
     }
-
 };
