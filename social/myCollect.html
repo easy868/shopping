@@ -7,16 +7,17 @@
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no,email=no" name="format-detection">
     <title>我的收藏</title>
-    <link rel="stylesheet" href="../css/social.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="my-collect">
 <header class="head clearfix">
-    <span class="fl">收藏商品 12 件</span>
-    <span class="fr">编辑</span>
+    <span class="fleft">收藏商品 12 件</span>
+    <span class="fright">编辑</span>
 </header>
-<div class="tab-content edit">
+<div class="tab-content collect-edit">
     <section class="tab-pane" style="display: block;">
-        <ul class="goods-list">
+        <ul class="tab-pane-list">
             <li class="goods-item">
                 <span class="check-btn"></span>
                 <img src="../imagestest/shop2.png" class="goods-img">
@@ -39,7 +40,7 @@
     </section>
 </div>
 <footer class="edit-handle" style="display: none;">
-    <div class="foot">
+    <div class="edit-handle-foot">
         <div class="l">
             <span class="choose-all"></span>全选
             <span class="choose-num">选中 <b>0</b> 件</span>
@@ -50,9 +51,9 @@
 <script src="../js/jquery-3.1.1.min.js"></script>
 <script>
     (function ($) {
-        var editBtn = $('.head .fr'),
+        var editBtn = $('.head .fright'),
             checkOne = $('.check-btn'),
-            checkAll = $('.foot .choose-all'),
+            checkAll = $('.edit-handle-foot .choose-all'),
             chooseNum = 0,
             a = true;
         editBtn.on('click', function () {  //编辑按钮点击事件
@@ -90,7 +91,7 @@
             }
         }
 
-        $('.foot .r').on('click', function () {  //取消收藏
+        $('.edit-handle-foot .r').on('click', function () {  //取消收藏
             checkOne.each(function (idx) {
                 if ($(this).hasClass('active')) {
                     $(this).parent('.goods-item').remove();

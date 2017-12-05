@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>遮罩弹层</title>
+    <style>
+        ul, li { margin: 0; padding: 0; list-style: none; }
+        .shade-mask { width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0, 0, 0, .1); font-size: 15px; }
+        .shade-mask-list { background: #fff; position: absolute; width: 75%; text-align: center; top: 40%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); border: 1px solid #ebebeb; border-radius: 4px; -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, .3); box-shadow: 1px 3px 6px rgba(0, 0, 0, .3); }
+        .shade-mask-list li { border-bottom: 1px solid #ebebeb; margin-bottom: -1px; min-height: 40px; line-height: 40px; color: #d01d47; }
+        .shade-mask-list li h2 { font-size: 17px; color: #333; font-weight: 400; margin: 10px 0; }
+    </style>
+</head>
+<body>
+<div class="shade-mask">
+    <ul class="shade-mask-list">
+        <li><h2>请在微信内完成支付</h2></li>
+        <li>已完成付款</li>
+        <li>打开微信支付</li>
+        <li>取消</li>
+    </ul>
+</div>
+</body>
+</html>
