@@ -429,6 +429,7 @@
         </div>
     </div>
     <!--预售说明弹窗-->
+    <input type="hidden" id="hidendate" value="2018/1/12 17:38:00">
 </div>
 <script src="js/jquery-3.1.1.min.js"></script>
 <!--jquery需要在swiper之前引入-->
@@ -471,8 +472,8 @@
         $('.explain-mask .explain-content').slideUp();
     });//关闭弹窗（预售说明）
 
-    $(".clock").fnTimeCountDown("2017/12/15 18:00:00");//    倒计时
-    $(".count-down-box").fnTimeCountDown("2017/10/30 18:00:00");//    倒计时
+     $(".clock").countDown($('#hidendate').val());//    倒计时
+    // $(".count-down-box").fnTimeCountDown("2018/10/30 18:00:00");//    倒计时
 
     $(window).bind("scroll", scrollFn);	//绑定滚动事件
     // var offset_top = $('.service-wrap').offset().top;

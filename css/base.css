@@ -40,7 +40,7 @@ input { outline: 0 }
 .nav .i4 { background-position: -279px 0 }
 .nav .active { color: #d01d47 }
 .num2 { position: absolute; top: -5px; left: 50%; display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: #d01d47; color: #fff; font-style: normal; font-size: 8px; line-height: 16px }
-.shopdetail-num { position: absolute; top: 0; right:-8px; display: inline-block; width: 16px; height: 16px; line-height: 16px ; border-radius: 50%; background: #d01d47; color: #fff; font-style: normal; font-size: 9px;}
+.shopdetail-num { position: absolute; top: 0; right: -8px; display: inline-block; width: 16px; height: 16px; line-height: 16px; border-radius: 50%; background: #d01d47; color: #fff; font-style: normal; font-size: 9px; }
 button, input, input[type=button], input[type=file], input[type=submit] { border-radius: 0; -webkit-appearance: none }
 a, button, input, textarea { outline: 0; -webkit-tap-highlight-color: transparent }
 .pb10 { padding-bottom: 10px }
@@ -94,6 +94,14 @@ textarea { resize: none }
 .btnbox a { float: left }
 .gotop { position: fixed; right: 15px; bottom: 70px; z-index: 900; border-radius: 100%; background: rgba(0, 0, 0, .6) }
 .gotop img { padding: 8px }
+.concern { width: 40px; height: 40px; border-radius: 100%; background: rgba(0, 0, 0, .6) url("../images/ew_icon.png") no-repeat center; background-size: 28px; }
+.posi-nav { position: fixed; right: 15px; bottom: 120px; z-index: 900;}
+.posi-nav-box{display: none;}
+.posi-nav-show .posi-nav-box{display: block;transition:all .8s linear;}
+.posi-nav .posi-nav-home, .posi-nav .posi-nav-my, .posi-nav .posi-nav-close, .posi-nav .posi-nav-menu {width: 40px;height: 40px;border-radius: 50%;background: rgba(0, 0, 0, .6) url("../images/home_light.png") no-repeat center center/24px;margin-bottom: 5px;}
+.posi-nav .posi-nav-my {background-image: url(../images/my_light.png);}
+.posi-nav .posi-nav-close {background-image: url(../images/close_light.png);background-size:18px;}
+.posi-nav .posi-nav-menu{background-image:url("../images/menu.png")}
 .index-wrapper { padding-bottom: 50px }
 .swiper-pagination-bullet { width: 10px; height: 3px; border-radius: 0 }
 .swiper-pagination-bullet { background: #fff; opacity: 1 }
@@ -258,13 +266,13 @@ span.choose-outher { float: right; margin-right: 10px; width: auto }
 .topnav a { display: inline-block; width: 65px; color: #fff }
 .topnav a.ac { border-bottom: 1px solid #fff }
 .foot-box { height: 55px }
-.footchoose { z-index: 10; position: fixed; bottom: 0; left: 0; width: 100%; height: 50px; line-height:50px; background: #fff; box-shadow: 0 -1px 15px rgba(0, 0, 0, .2); text-align: center; font-size: 14px; box-sizing: border-box; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: center; -webkit-align-items: center; align-items: center; }
+.footchoose { z-index: 10; position: fixed; bottom: 0; left: 0; width: 100%; height: 50px; line-height: 50px; background: #fff; box-shadow: 0 -1px 15px rgba(0, 0, 0, .2); text-align: center; font-size: 14px; box-sizing: border-box; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: center; -webkit-align-items: center; align-items: center; }
 .footchoose li { -webkit-box-flex: 0; -webkit-flex: 0 0 27%; flex: 0 0 27%; }
-.footchoose .li1 { position: relative; -webkit-box-flex: 0; -webkit-flex: 0 0 46%; flex: 0 0 46%; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-justify-content: space-around; justify-content: space-around; line-height:1.5; font-size:12px; }
-.footchoose .li1 a{ -webkit-box-flex:1; -webkit-flex:1; flex:1;}
-.footchoose .collect { display: inline-block; vertical-align: middle; width: 24px; height: 24px; background: url("../images/favorite.png") no-repeat center; background-size: contain; }
-.footchoose .active{ background-image: url(../images/favorites-filling.png);}
-.footchoose .li1 p{ margin-top: 3px;}
+.footchoose .li1 { position: relative; -webkit-box-flex: 0; -webkit-flex: 0 0 46%; flex: 0 0 46%; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-justify-content: space-around; justify-content: space-around; line-height: 1.5; font-size: 11px; }
+.footchoose .li1 a { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; }
+.footchoose .collect { display: inline-block; vertical-align: middle; width: 20px; height: 20px; background: url("../images/favorite.png") no-repeat center; background-size: contain; }
+.footchoose .active { background-image: url(../images/favorites-filling.png); }
+.footchoose .li1 p { margin-top: 3px; }
 .footchoose li:nth-child(2) a { border-left: 1px solid #ebebeb; color: #333 }
 .shade { position: fixed; top: 0; left: 0; z-index: 1000; display: none; width: 100%; height: 100%; background: rgba(0, 0, 0, .5) }
 .size-wrap { position: fixed; bottom: 0; left: 0; z-index: 20; display: none; width: 100%; background: #fff; color: #333; font-size: 10px; opacity: 1 }
@@ -287,7 +295,7 @@ span.choose-outher { float: right; margin-right: 10px; width: auto }
 .size-choose { font-size: 13px }
 .numtit { float: left; color: #d01d47; font-size: 16px }
 .shopimg { position: absolute; bottom: 0; width: 75px }
-.icon-index, .shopdetailcart { position: relative; display: inline-block; width: 24px; height: 24px; background-image: url(../images/cart.png); background-position: center center; background-size: contain; background-repeat: no-repeat; vertical-align: middle; -webkit-background-size: contain }
+.icon-index, .shopdetailcart { position: relative; display: inline-block; width: 20px; height: 20px; background-image: url(../images/cart.png); background-position: center center; background-size: contain; background-repeat: no-repeat; vertical-align: middle; -webkit-background-size: contain }
 .icon-index { background-image: url(../images/home.png) }
 .discount { margin-left: 15px; padding: 0 3px; border: 1px solid #d01d47; border-radius: 2px; font-size: 10px }
 .shopindex { padding: 15px 10px; height: 40px; background: url(../images/shoplogo.png) no-repeat left 15px center, url(../images/right.png) no-repeat right 10px center #fff; background-size: 40px, 8px }
@@ -340,6 +348,7 @@ input.save { display: block; margin: 10px auto; width: 64%; height: 40px; border
 .allpric { box-sizing: border-box; padding-left: 10px; width: 70%; text-align: left; font-size: 0 }
 .allpric > span { vertical-align: middle; font-size: 12px }
 .we-pay { width: 30%; background: #d01d47; color: #fff; font-size: 14px }
+.we-nopay {width: 40%;background: #888;color: #fff;font-size: 14px;}
 @media only screen and (min-device-width: 320px) and (max-device-width: 325px) {
     select { width: 49px; outline: 0; border: none; -webkit-appearance: none; appearance: none }
     select option { width: 49px }

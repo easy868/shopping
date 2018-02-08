@@ -150,5 +150,28 @@
     <img src="images/gotop.png" alt="" width="24">
 </a>
 <!--返回顶部-->
+<div class="posi-nav">
+    <div class="posi-nav-box">
+        <a href="#" class="posi-nav-home"></a>
+        <a href="#" class="posi-nav-my"></a>
+        <a href="#" class="posi-nav-close"></a>
+    </div>
+    <a href="##" class="posi-nav-menu"></a>
+    <a href="##" class="concern"></a>
+    <!--关注-->
+</div>
 </body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+    $(function () {
+        $('.posi-nav-menu').on('click', function () {
+            $(this).hide();
+            $('.posi-nav').addClass('posi-nav-show')
+        });
+        $('.posi-nav-close').on('click', function () {
+            $('.posi-nav').removeClass('posi-nav-show');
+            $('.posi-nav-menu').show()
+        })
+    })
+</script>
 </html>
